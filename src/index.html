@@ -6,8 +6,29 @@
     <title>Sudoku Tester</title>
     <script type="module" src="app.js"></script>
     <script src="../node_modules/eruda/eruda.js"></script>
-    <script>eruda.init();</script>
+    <script>//eruda.init();</script>
   </head>
   <body>
+    <iframe id="frame" />
   </body>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: block;
+      width: 100dvw;
+      height: 100dvh;
+    }
+
+    #frame {
+      top: 0;
+      left: 0;
+      width: 100dvw;
+      height: 100dvh;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+  </style>
 </html>
