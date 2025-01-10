@@ -95,26 +95,93 @@
         "fill": "#0000ff33",
         "thickness": 0,
         "target": "underlay"
+      },
+
+      {
+        "d": "M 407 646 m 0 6 l 12 0 l 6 -6 l -12 0 l -6 6 l 0 12 l 12 0 l 0 -12 m 6 -6 l 0 12 l -6 6 l 0 -12",
+        "fill": "#3336",
+        "thickness": 1,
+        "color": "#000f",
+        "target": "overlay"
+      },
+
+      {
+        "d": "M 131 646 m 0 6 l 12 0 l 6 -6 l -12 0 l -6 6 l 0 12 l 12 0 l 0 -12 m 6 -6 l 0 12 l -6 6 l 0 -12",
+        "fill": "#e226",
+        "thickness": 1,
+        "color": "#b11f",
+        "target": "overlay"
+      },
+      {
+        "d": "M 151 646 m 0 6 l 12 0 l 6 -6 l -12 0 l -6 6 l 0 12 l 12 0 l 0 -12 m 6 -6 l 0 12 l -6 6 l 0 -12",
+        "fill": "#e226",
+        "thickness": 1,
+        "color": "#b11f",
+        "target": "overlay"
+      },
+      {
+        "d": "M 171 646 m 0 6 l 12 0 l 6 -6 l -12 0 l -6 6 l 0 12 l 12 0 l 0 -12 m 6 -6 l 0 12 l -6 6 l 0 -12",
+        "fill": "#e226",
+        "thickness": 1,
+        "color": "#b11f",
+        "target": "overlay"
+      },
+
+      {
+        "d": "M 195 646 m 0 6 l 12 0 l 6 -6 l -12 0 l -6 6 l 0 12 l 12 0 l 0 -12 m 6 -6 l 0 12 l -6 6 l 0 -12",
+        "fill": "#e226",
+        "thickness": 1,
+        "color": "#b11f",
+        "target": "overlay"
+      },
+      {
+        "d": "M 215 646 m 0 6 l 12 0 l 6 -6 l -12 0 l -6 6 l 0 12 l 12 0 l 0 -12 m 6 -6 l 0 12 l -6 6 l 0 -12",
+        "fill": "#e226",
+        "thickness": 1,
+        "color": "#b11f",
+        "target": "overlay"
+      },
+      {
+        "d": "M 235 646 m 0 6 l 12 0 l 6 -6 l -12 0 l -6 6 l 0 12 l 12 0 l 0 -12 m 6 -6 l 0 12 l -6 6 l 0 -12",
+        "fill": "#e226",
+        "thickness": 1,
+        "color": "#b11f",
+        "target": "overlay"
+      },
+
+      {
+        "d": "M 267 646 m 0 6 l 12 0 l 6 -6 l -12 0 l -6 6 l 0 12 l 12 0 l 0 -12 m 6 -6 l 0 12 l -6 6 l 0 -12",
+        "fill": "#e226",
+        "thickness": 1,
+        "color": "#b11f",
+        "target": "overlay"
+      },
+      {
+        "d": "M 291 646 m 0 6 l 12 0 l 6 -6 l -12 0 l -6 6 l 0 12 l 12 0 l 0 -12 m 6 -6 l 0 12 l -6 6 l 0 -12",
+        "fill": "#e226",
+        "thickness": 1,
+        "color": "#b11f",
+        "target": "overlay"
       }
     ],
     "overlays": [
       { 
         "center": [0.5, 6.5], "width": 0.4, 
         "height": 0.4, "rounded": "true", 
-        "borderColor": "#000f",
-        "backgroundColor": "#e22f"
+        "borderColor": "#b11f",
+        "backgroundColor": "#e226"
       },
       { 
         "center": [4.5, 2.5], "width": 0.4, 
         "height": 0.4, "rounded": "true", 
-        "borderColor": "#000f",
-        "backgroundColor": "#e22f"
+        "borderColor": "#b11f",
+        "backgroundColor": "#e226"
       },
       { 
         "center": [3.5, 6.5], "width": 0.4, 
         "height": 0.4, "rounded": "true", 
-        "borderColor": "#000f",
-        "backgroundColor": "#e22f"
+        "borderColor": "#b11f",
+        "backgroundColor": "#e226"
       },
 
       { 
@@ -134,25 +201,80 @@
         "center": [8.5, 0.5], "width": 0.4, 
         "height": 0.4, "rounded": "true", 
         "borderColor": "#000f",
-        "backgroundColor": "#00bfffff"
+        "backgroundColor": "#3336"
       },
       { 
         "center": [4.5, 4.5], "width": 0.4, 
         "height": 0.4, "rounded": "true", 
         "borderColor": "#000f",
-        "backgroundColor": "#00bfffff"
+        "backgroundColor": "#3336"
       },
       { 
         "center": [8.5, 6.5], "width": 0.4, 
         "height": 0.4, "rounded": "true", 
         "borderColor": "#000f",
-        "backgroundColor": "#00bfffff"
+        "backgroundColor": "#3336"
       },
       { 
         "center": [3.5, 1.5], "width": 0.4, 
         "height": 0.4, "rounded": "true", 
         "borderColor": "#000f",
-        "backgroundColor": "#00bfffff"
+        "backgroundColor": "#3336"
+      },
+
+      { 
+        "center": [9.5, 0.5], "width": 0.4, 
+        "height": 0.4, "rounded": "true", 
+        "borderColor": "#000f",
+        "backgroundColor": "#ffff"
+      },
+      { 
+        "center": [9.5, 1.5], "width": 0.4, 
+        "height": 0.4, "rounded": "true", 
+        "borderColor": "#000f",
+        "backgroundColor": "#ffff"
+      },
+      { 
+        "center": [9.5, 2.5], "width": 0.4, 
+        "height": 0.4, "rounded": "true", 
+        "borderColor": "#b11f",
+        "backgroundColor": "#e226"
+      },
+      { 
+        "center": [9.5, 3.5], "width": 0.4, 
+        "height": 0.4, "rounded": "true", 
+        "borderColor": "#b11f",
+        "backgroundColor": "#e226"
+      },
+      { 
+        "center": [9.5, 4.5], "width": 0.4, 
+        "height": 0.4, "rounded": "true", 
+        "borderColor": "#b11f",
+        "backgroundColor": "#e226"
+      },
+      { 
+        "center": [9.5, 5.5], "width": 0.4, 
+        "height": 0.4, "rounded": "true", 
+        "borderColor": "#000f",
+        "backgroundColor": "#3336"
+      },
+      { 
+        "center": [9.5, 6.5], "width": 0.4, 
+        "height": 0.4, "rounded": "true", 
+        "borderColor": "#000f",
+        "backgroundColor": "#3336"
+      },
+      { 
+        "center": [9.5, 7.5], "width": 0.4, 
+        "height": 0.4, "rounded": "true", 
+        "borderColor": "#000f",
+        "backgroundColor": "#3336"
+      },
+      { 
+        "center": [9.5, 8.5], "width": 0.4, 
+        "height": 0.4, "rounded": "true", 
+        "borderColor": "#000f",
+        "backgroundColor": "#3336"
       }
     ],
     "underlays": [
@@ -246,6 +368,106 @@
       },
       {
         "center": [8.85, 6.5],
+        "width": 0,
+        "height": 0.504,
+        "stroke": "#ffffff",
+        "text": "I",
+        "fontSize": 15,
+        "color": "#000000",
+        "angle": 0,
+        "rounded": true
+      },
+
+      {
+        "center": [9.85, 0.5],
+        "width": 0,
+        "height": 0.504,
+        "stroke": "#ffffff",
+        "text": "A",
+        "fontSize": 15,
+        "color": "#000000",
+        "angle": 0,
+        "rounded": true
+      },
+      {
+        "center": [9.85, 1.5],
+        "width": 0,
+        "height": 0.504,
+        "stroke": "#ffffff",
+        "text": "B",
+        "fontSize": 15,
+        "color": "#000000",
+        "angle": 0,
+        "rounded": true
+      },
+      {
+        "center": [9.85, 2.5],
+        "width": 0,
+        "height": 0.504,
+        "stroke": "#ffffff",
+        "text": "C",
+        "fontSize": 15,
+        "color": "#000000",
+        "angle": 0,
+        "rounded": true
+      },
+      {
+        "center": [9.85, 3.5],
+        "width": 0,
+        "height": 0.504,
+        "stroke": "#ffffff",
+        "text": "D",
+        "fontSize": 15,
+        "color": "#000000",
+        "angle": 0,
+        "rounded": true
+      },
+      {
+        "center": [9.85, 4.5],
+        "width": 0,
+        "height": 0.504,
+        "stroke": "#ffffff",
+        "text": "E",
+        "fontSize": 15,
+        "color": "#000000",
+        "angle": 0,
+        "rounded": true
+      },
+      {
+        "center": [9.85, 5.5],
+        "width": 0,
+        "height": 0.504,
+        "stroke": "#ffffff",
+        "text": "F",
+        "fontSize": 15,
+        "color": "#000000",
+        "angle": 0,
+        "rounded": true
+      },
+      {
+        "center": [9.85, 6.5],
+        "width": 0,
+        "height": 0.504,
+        "stroke": "#ffffff",
+        "text": "G",
+        "fontSize": 15,
+        "color": "#000000",
+        "angle": 0,
+        "rounded": true
+      },
+      {
+        "center": [9.85, 7.5],
+        "width": 0,
+        "height": 0.504,
+        "stroke": "#ffffff",
+        "text": "H",
+        "fontSize": 15,
+        "color": "#000000",
+        "angle": 0,
+        "rounded": true
+      },
+      {
+        "center": [9.85, 8.5],
         "width": 0,
         "height": 0.504,
         "stroke": "#ffffff",
