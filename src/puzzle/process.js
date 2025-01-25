@@ -10,11 +10,13 @@ export function processPuzzle(data) {
 }
 
 function addRules(data) {
-    data.metadata.rules = convert(RulesHtml);
+    data.metadata.rules = convert(RulesHtml, {wordwrap: false});
 }
 
 function addMsgCorrect(data) {
-    data.metadata.msgcorrect = convert(MsgCorrectHTML);
+    if (MsgCorrectHTML.length > 0) {
+        data.metadata.msgcorrect = convert(MsgCorrectHTML, {wordwrap: false});
+    }
 }
 
 function getSolutionArray(data) {

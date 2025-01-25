@@ -6,29 +6,25 @@
     <title>Sudoku Tester</title>
     <script type="module" src="app.js"></script>
     <script src="../node_modules/eruda/eruda.js"></script>
-    <script>eruda.init(); eruda.position({x: 50, y: 0});</script>
+    <script>eruda.init();</script>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <iframe id="frame" />
-  </body>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      display: block;
-      width: 100dvw;
-      height: 100dvh;
-    }
+  <body class="preview">
+    <iframe id="frame"></iframe>
 
-    #frame {
-      top: 0;
-      left: 0;
-      width: 100dvw;
-      height: 100dvh;
-      margin: 0;
-      padding: 0;
-      border: none;
-    }
-  </style>
+    <div class="menu-bar">
+      <button class="menu-button" data-target="overview">Overview</button>
+      <button class="menu-button" data-target="preview">Preview</button>
+    </div>
+
+    <div id="overview" class="content-section">
+      <h2 id="puzzle-title"></h2>
+      <a target="_blank" id="generateUrl">Generate url</a>
+      <h3>Rules</h3>
+      <div id="puzzle-rules"></div>
+      <h3>Solution</h3>
+      <div id="puzzle-msgcorrect"></div>
+    </div>
+
+  </body>
 </html>
