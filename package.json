@@ -1,14 +1,19 @@
 {
-    "name": "sudoku",
-    "source": "src/index.html",
-    "browserslist": "> 0.5%, last 2 versions, not dead",
-    "scripts": {
-      "start": "parcel",
-      "build": "parcel build"
-    },
-    "devDependencies": {
-      "eruda": "^3.4.1",
-      "parcel": "latest"
-    }
+  "name": "sudoku",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "buffer": "^5.5.0||^6.0.0",
+    "eruda": "^3.4.1",
+    "parcel": "latest",
+    "parcel-transformer-markdown": "^3.0.1",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "html-to-text": "^9.0.5"
+  }
 }
-  
