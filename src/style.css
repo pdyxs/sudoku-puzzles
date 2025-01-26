@@ -26,6 +26,12 @@
     }
 }
 
+textarea {
+    margin-top: 10px;
+    width: calc(100dvw - 50px);
+    height: 400px;
+}
+
 .content-section {
     display: none;
     padding: 20px;
@@ -64,6 +70,12 @@ body.preview {
         width: 100dvw;
         height: calc(100dvh - var(--header-height));
     }
+}
+
+pre {
+    max-width: 100dvw;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 .url-container {

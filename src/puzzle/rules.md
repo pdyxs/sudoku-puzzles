@@ -1,4 +1,4 @@
-Normal sudoku rules apply
+Sudoku: Fill the grid with the digits 1-9, so that each digit occurs exactly once in every row, every column and every 3x3 box.
 
 Contours: Red lines are contours. Each line has a "high" side and a "low" side, to be determined by the solver. If two orthogonal digits are separated by a contour line, the digit on the "high" side must be higher.
 

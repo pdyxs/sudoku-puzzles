@@ -15,15 +15,27 @@
     <div class="menu-bar">
       <button class="menu-button" data-target="overview">Overview</button>
       <button class="menu-button" data-target="preview">Preview</button>
+      <button class="menu-button" data-target="html">HTML</button>
     </div>
 
     <div id="overview" class="content-section">
       <h2 id="puzzle-title"></h2>
       <a target="_blank" id="generateUrl">Generate url</a>
-      <h3>Rules</h3>
-      <div id="puzzle-rules"></div>
+      <div id="html-container">
+        <div id="puzzle-preamble"></div>
+        <div><h3>Rules</h3></div>
+        <div id="puzzle-rules"></div>
+        <div>
+          <div style="clear:both;text-align:center"></div>
+          <p><a href="">Play in SudokuPad</a></p>
+        </div>
+      </div>
       <h3>Solution</h3>
       <div id="puzzle-msgcorrect"></div>
+    </div>
+
+    <div id="html" class="content-section">
+      <textarea id="html-pre" readonly></textarea>
     </div>
 
   </body>
