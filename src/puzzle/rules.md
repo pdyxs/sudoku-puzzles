@@ -1,11 +1,9 @@
-Sudoku: Fill the grid with the digits 1-9, so that each digit occurs exactly once in every row, every column and every 3x3 box.
+Sudoku: Fill the grid with digits 1 to 9, so that each digit occurs exactly once in every row, every column and every 3x3 box.
 
-Contours: Red lines are contours. Each line has a "high" side and a "low" side, to be determined by the solver. If two orthogonal digits are separated by a contour line, the digit on the "high" side must be higher.
+Renban: A purple line contains a set of non-repeating consecutive digits in any order.
 
-Skyscraper Fog: The grid begins covered in fog. Each digit represents terrain of a height of that digit itself. Higher digits always block the line of sight of smaller digits.
+Sandwich: Clues outside the grid show the sum of the digits between the 1 and 9 in that row or column
 
-When a digit is placed, fog will clear at that cell, and from any cells that can be seen from that cell in one of the four orthogonal directions. Note that the height of a cell is irrelevant for determining what can be seen from it.
+Little Killer: Clues outside the grid with an arrow ALSO show the sum of the digits on the indicated diagonal
 
-Given digit: A white digit is given, but will need to be entered.
-
-Solving note: You'll need to delete digits you have solved in order to determine what other digits see. Use other markings (letters/colours with a white flash) to keep track of this.
+Blank Clues: A box indicates that the Little Killer and Sandwich clues here have the same value, to be determined by the solver. Each box can have a different value.

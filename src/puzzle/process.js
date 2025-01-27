@@ -5,7 +5,7 @@ import { convert } from "html-to-text";
 export function processPuzzle(data) {
     addRules(data);
     addMsgCorrect(data);
-    createSkyscraperFogTriggers(data);
+    // createSkyscraperFogTriggers(data);
     return data;
 }
 

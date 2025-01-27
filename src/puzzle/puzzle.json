@@ -1,12 +1,12 @@
 {
-  "id": "sxsm_pdyxs_a72314ae287c5fe640de0c21206a0feb",
+  "id": "sxsm_pdyxs_e5c0a19e593f0ebdab97a787409ead38",
   "metadata": {
-    "source": "Sudoku Maker v2025.01.15-dev-9ed2a84",
-    "title": "Cartography",
+    "source": "Sudoku Maker v2024.11.16-2f52641",
+    "title": "Little fillers 2",
     "author": "pdyxs",
-    "solution": "527634189984125763361987542815472396649318257273596418792841635458763921136259874"
+    "rules": "Sudoku: Fill the grid with digits 1 to 9, so that each digit occurs exactly once in every row, every column and every 3x3 box.\n\nRenban: A purple line contains a set of non-repeating consecutive digits in any order.\n\nSandwich: Clues outside the grid show the sum of the digits between the 1 and 9 in that row or column\n\nLittle Killer: Clues outside the grid with an arrow ALSO show the sum of the digits on the indicated diagonal\n\nBlank Clues: A box indicates that the Little Killer and Sandwich clues here have the same value, to be determined by the solver. Each box can have a different value.",
+    "solution": "453216879279438651168579324316795248542683917987142536891327465634851792725964183"
   },
-  "foglight": [],
   "cages": [],
   "cells": [
     [{}, {}, {}, {}, {}, {}, {}, {}, {}],
@@ -123,104 +123,174 @@
   "lines": [
     {
       "wayPoints": [
-        [0, 3],
-        [1, 3],
-        [1, 2],
-        [3, 2],
-        [3, 1],
-        [4, 1],
-        [4, 0]
+        [8.5, 1.5],
+        [6.5, 3.5],
+        [7.5, 4.5]
       ],
-      "color": "#e6261fff",
-      "thickness": 9.6,
-      "target": "cell-grids"
-    },
-    {
-      "wayPoints": [[2, 0], [2, 1], [0, 1]],
-      "color": "#e6261fff",
-      "thickness": 9.6,
-      "target": "cell-grids"
+      "color": "#f067f0ff",
+      "thickness": 9.6
     },
     {
       "wayPoints": [
-        [9, 5],
-        [8, 5],
-        [8, 6],
-        [6, 6],
-        [6, 8],
-        [5, 8],
-        [5, 9]
+        [4.5, 5.5],
+        [3.5, 6.5],
+        [4.5, 7.5]
       ],
-      "color": "#e6261fff",
-      "thickness": 9.6,
-      "target": "cell-grids"
+      "color": "#f067f0ff",
+      "thickness": 9.6
     },
     {
-      "wayPoints": [[9, 7], [7, 7], [7, 9]],
-      "color": "#e6261fff",
-      "thickness": 9.6,
-      "target": "cell-grids"
-    },
-    {
-      "wayPoints": [[2, 9], [2, 8], [4, 8], [4, 9]],
-      "color": "#e6261fff",
-      "thickness": 9.6,
-      "target": "cell-grids"
+      "wayPoints": [[0.5, 3.5], [1.5, 4.5]],
+      "color": "#f067f0ff",
+      "thickness": 9.6
     },
     {
       "wayPoints": [
-        [4, 6],
-        [4, 7],
-        [5, 7],
-        [5, 6],
-        [4, 6]
+        [6.5, 6.5],
+        [5.5, 7.5],
+        [6.5, 8.5]
       ],
-      "color": "#e6261fff",
-      "thickness": 9.6,
-      "target": "cell-grids"
+      "color": "#f067f0ff",
+      "thickness": 9.6
+    }
+  ],
+  "underlays": [
+    {
+      "center": [0.5, 9.5],
+      "width": 0.52,
+      "height": 0.52,
+      "thickness": 1.28,
+      "angle": 0,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
     },
     {
-      "wayPoints": [
-        [2, 3],
-        [3, 3],
-        [3, 4],
-        [4, 4],
-        [4, 5],
-        [3, 5],
-        [3, 6],
-        [2, 6],
-        [2, 7],
-        [1, 7],
-        [1, 5],
-        [2, 5],
-        [2, 3]
-      ],
-      "color": "#e6261fff",
-      "thickness": 9.6,
-      "target": "cell-grids"
+      "center": [5.5, 9.5],
+      "width": 0.52,
+      "height": 0.52,
+      "thickness": 1.28,
+      "angle": 0,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
     },
     {
-      "wayPoints": [
-        [6, 1],
-        [8, 1],
-        [8, 4],
-        [6, 4],
-        [6, 3],
-        [7, 3],
-        [7, 2],
-        [6, 2],
-        [6, 1]
-      ],
-      "color": "#e6261fff",
-      "thickness": 9.6,
-      "target": "cell-grids"
+      "center": [-0.5, 2.5],
+      "width": 0.52,
+      "height": 0.52,
+      "thickness": 1.28,
+      "angle": 0,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
     },
     {
-      "d": "M 64 448 m 40 15 l -16 0 l 0 14 a 11 11 0 1 1 0 16",
-      "color": "#ffff",
-      "thickness": 6,
-      "rounded": 0,
-      "target": "cell-grids"
+      "center": [-0.5, 7.5],
+      "width": 0.52,
+      "height": 0.52,
+      "thickness": 1.28,
+      "angle": 0,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [9.5, 7.5],
+      "width": 0.52,
+      "height": 0.52,
+      "thickness": 1.28,
+      "angle": 0,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [2.5, -0.5],
+      "width": 0.52,
+      "height": 0.52,
+      "thickness": 1.28,
+      "angle": 0,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [-0.5, 3.5],
+      "width": 0.52,
+      "height": 0.52,
+      "thickness": 1.28,
+      "angle": 0,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [-0.5, 5.5],
+      "width": 0.52,
+      "height": 0.52,
+      "thickness": 1.28,
+      "angle": 0,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [7.5, -0.5],
+      "width": 0.52,
+      "height": 0.52,
+      "thickness": 1.28,
+      "angle": 0,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    }
+  ],
+  "arrows": [
+    {
+      "wayPoints": [[0.734, 9.266], [0.932, 9.068]],
+      "headLength": 0.17,
+      "color": "#000000",
+      "thickness": 3.2
+    },
+    {
+      "wayPoints": [[5.734, 9.266], [5.932, 9.068]],
+      "headLength": 0.17,
+      "color": "#000000",
+      "thickness": 3.2
+    },
+    {
+      "wayPoints": [[-0.266, 2.734], [-0.068, 2.932]],
+      "headLength": 0.17,
+      "color": "#000000",
+      "thickness": 3.2
+    },
+    {
+      "wayPoints": [[-0.266, 7.734], [-0.068, 7.932]],
+      "headLength": 0.17,
+      "color": "#000000",
+      "thickness": 3.2
+    },
+    {
+      "wayPoints": [[2.734, -0.266], [2.932, -0.068]],
+      "headLength": 0.17,
+      "color": "#000000",
+      "thickness": 3.2
+    },
+    {
+      "wayPoints": [[9.266, 7.266], [9.068, 7.068]],
+      "headLength": 0.17,
+      "color": "#000000",
+      "thickness": 3.2
+    },
+    {
+      "wayPoints": [[-0.266, 3.266], [-0.068, 3.068]],
+      "headLength": 0.17,
+      "color": "#000000",
+      "thickness": 3.2
+    },
+    {
+      "wayPoints": [[-0.266, 5.734], [-0.068, 5.932]],
+      "headLength": 0.17,
+      "color": "#000000",
+      "thickness": 3.2
+    },
+    {
+      "wayPoints": [[7.734, -0.266], [7.932, -0.068]],
+      "headLength": 0.17,
+      "color": "#000000",
+      "thickness": 3.2
     }
   ]
 }
