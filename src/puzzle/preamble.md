@@ -1,3 +1,1 @@
-*A sequel to [Little Fillers](https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000L72), this time without any digits!*
-
-*This has been percolating in my mind ever since I made Little Fillers - I think I've found some really nice logic using these combined variants. I look forward to hearing how y'all find it!*
+*Here's another entry in my "Experimental fog" series. Here I'm continuing to look at having the fog itself be meaningful, this time using Yin Yang rules. I'd love to hear how long it took you to complete, and any feedback on difficulty and rules clarity.*

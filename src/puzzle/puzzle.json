@@ -1,12 +1,374 @@
 {
-  "id": "sxsm_pdyxs_e5c0a19e593f0ebdab97a787409ead38",
+  "id": "sxsm_pdyxs_c8e410618a3fbc07d4afbeb42b3d394f",
   "metadata": {
-    "source": "Sudoku Maker v2024.11.16-2f52641",
-    "title": "Little fillers 2",
+    "source": "Sudoku Maker v2025.01.15-dev-9ed2a84",
+    "title": "Foggyin' Yang",
     "author": "pdyxs",
-    "rules": "Sudoku: Fill the grid with digits 1 to 9, so that each digit occurs exactly once in every row, every column and every 3x3 box.\n\nRenban: A purple line contains a set of non-repeating consecutive digits in any order.\n\nSandwich: Clues outside the grid show the sum of the digits between the 1 and 9 in that row or column\n\nLittle Killer: Clues outside the grid with an arrow ALSO show the sum of the digits on the indicated diagonal\n\nBlank Clues: A box indicates that the Little Killer and Sandwich clues here have the same value, to be determined by the solver. Each box can have a different value.",
-    "solution": "453216879279438651168579324316795248542683917987142536891327465634851792725964183"
+    "solution": "843165927672839451915274368186943572237581649594627183729416835361758294458392716"
   },
+  "foglight": [],
+  "triggereffect": [
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r1c7"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r1c7r2c7r1c8r1c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r1c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r1c8r1c7r1c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r1c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r1c9r1c8r1c7r2c9r3c9r4c9r5c9r6c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c2r3c2r4c2r5c2r6c2r2c3r2c4r2c5r2c6r2c7"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c3"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c3r2c2r2c4r2c5r2c6r2c7"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c4"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c4r3c4r4c4r2c5r2c6r2c7r2c3r2c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c5"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c5r2c6r2c7r2c4r2c3r2c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c6r3c6r2c7r2c5r2c4r2c3r2c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c7"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c7r1c7r2c6r2c5r2c4r2c3r2c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c9r1c9r3c9r4c9r5c9r6c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r3c2r2c2r4c2r5c2r6c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c4"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r3c4r4c4r2c4"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r3c6r2c6"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r3c9r2c9r1c9r4c9r5c9r6c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r4c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r4c2r3c2r2c2r5c2r6c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r4c4"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r4c4r3c4r2c4"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r4c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r4c8r4c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r4c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r4c9r3c9r2c9r1c9r5c9r6c9r4c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r5c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r5c2r6c2r4c2r3c2r2c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r5c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r5c6r6c6"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r5c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r5c9r6c9r4c9r3c9r2c9r1c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c2r6c3r5c2r4c2r3c2r2c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c3"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c3r6c2r7c3r8c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c5"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c5r6c6r6c7r6c8r6c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c6r5c6r6c7r6c8r6c9r6c5"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c7"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c7r6c6r6c5r6c8r6c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c8r6c9r6c7r6c6r6c5r7c8r8c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c9r6c8r6c7r6c6r6c5r5c9r4c9r3c9r2c9r1c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r7c3"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r7c3r6c3r8c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r7c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r7c8r8c8r6c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c2r8c3r8c4"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c3"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c3r8c2r8c4r7c3r6c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c4"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c4r8c3r8c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c6r8c7r8c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c7"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c7r8c6r8c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c8r7c8r6c8r8c7r8c6"
+      }
+    }
+  ],
   "cages": [],
   "cells": [
     [{}, {}, {}, {}, {}, {}, {}, {}, {}],
@@ -123,174 +485,100 @@
   "lines": [
     {
       "wayPoints": [
-        [8.5, 1.5],
-        [6.5, 3.5],
-        [7.5, 4.5]
-      ],
-      "color": "#f067f0ff",
-      "thickness": 9.6
-    },
-    {
-      "wayPoints": [
-        [4.5, 5.5],
-        [3.5, 6.5],
-        [4.5, 7.5]
-      ],
-      "color": "#f067f0ff",
-      "thickness": 9.6
-    },
-    {
-      "wayPoints": [[0.5, 3.5], [1.5, 4.5]],
-      "color": "#f067f0ff",
-      "thickness": 9.6
-    },
-    {
-      "wayPoints": [
-        [6.5, 6.5],
+        [3.5, 3.5],
+        [1.5, 3.5],
+        [1.5, 6.5],
+        [0.5, 6.5],
+        [0.5, 8.5],
+        [5.5, 8.5],
         [5.5, 7.5],
-        [6.5, 8.5]
+        [7.5, 7.5],
+        [7.5, 5.5]
       ],
-      "color": "#f067f0ff",
+      "color": "#67f067ff",
       "thickness": 9.6
+    },
+    {
+      "wayPoints": [
+        [1.5, 3.5],
+        [1.5, 1.5],
+        [5.5, 1.5],
+        [5.5, 2.5],
+        [7.5, 2.5],
+        [7.5, 3.5]
+      ],
+      "color": "#67f067ff",
+      "thickness": 9.6
+    },
+    {
+      "wayPoints": [[1.5, 5.5], [2.5, 5.5]],
+      "color": "#67f067ff",
+      "thickness": 9.6
+    },
+    {
+      "wayPoints": [[3.5, 8.5], [3.5, 7.5]],
+      "color": "#67f067ff",
+      "thickness": 9.6
+    },
+    {
+      "wayPoints": [
+        [5.5, 7.5],
+        [5.5, 5.5],
+        [4.5, 5.5]
+      ],
+      "color": "#67f067ff",
+      "thickness": 9.6
+    },
+    {
+      "wayPoints": [[7.5, 2.5], [7.5, 1.5]],
+      "color": "#67f067ff",
+      "thickness": 9.6
+    },
+    {
+      "wayPoints": [[5.5, 5.5], [5.5, 4.5]],
+      "color": "#67f067ff",
+      "thickness": 9.6
+    },
+    {
+      "wayPoints": [[1.25,1.3], [1.25,1.65], [1.75, 1.4]],
+      "color": "#fff",
+      "thickness": 6,
+      "target": "cell-grids"
     }
   ],
-  "underlays": [
+  "overlays": [
     {
-      "center": [0.5, 9.5],
-      "width": 0.52,
-      "height": 0.52,
+      "center": [1.5, 7],
+      "width": 0.34,
+      "height": 0.34,
       "thickness": 1.28,
-      "angle": 0,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
       "backgroundColor": "#FFFFFF",
       "borderColor": "#000000"
     },
     {
-      "center": [5.5, 9.5],
-      "width": 0.52,
-      "height": 0.52,
+      "center": [2.5, 6],
+      "width": 0.34,
+      "height": 0.34,
       "thickness": 1.28,
-      "angle": 0,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
       "backgroundColor": "#FFFFFF",
       "borderColor": "#000000"
     },
     {
-      "center": [-0.5, 2.5],
-      "width": 0.52,
-      "height": 0.52,
+      "center": [6, 5.5],
+      "width": 0.34,
+      "height": 0.34,
       "thickness": 1.28,
-      "angle": 0,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
       "backgroundColor": "#FFFFFF",
       "borderColor": "#000000"
-    },
-    {
-      "center": [-0.5, 7.5],
-      "width": 0.52,
-      "height": 0.52,
-      "thickness": 1.28,
-      "angle": 0,
-      "backgroundColor": "#FFFFFF",
-      "borderColor": "#000000"
-    },
-    {
-      "center": [9.5, 7.5],
-      "width": 0.52,
-      "height": 0.52,
-      "thickness": 1.28,
-      "angle": 0,
-      "backgroundColor": "#FFFFFF",
-      "borderColor": "#000000"
-    },
-    {
-      "center": [2.5, -0.5],
-      "width": 0.52,
-      "height": 0.52,
-      "thickness": 1.28,
-      "angle": 0,
-      "backgroundColor": "#FFFFFF",
-      "borderColor": "#000000"
-    },
-    {
-      "center": [-0.5, 3.5],
-      "width": 0.52,
-      "height": 0.52,
-      "thickness": 1.28,
-      "angle": 0,
-      "backgroundColor": "#FFFFFF",
-      "borderColor": "#000000"
-    },
-    {
-      "center": [-0.5, 5.5],
-      "width": 0.52,
-      "height": 0.52,
-      "thickness": 1.28,
-      "angle": 0,
-      "backgroundColor": "#FFFFFF",
-      "borderColor": "#000000"
-    },
-    {
-      "center": [7.5, -0.5],
-      "width": 0.52,
-      "height": 0.52,
-      "thickness": 1.28,
-      "angle": 0,
-      "backgroundColor": "#FFFFFF",
-      "borderColor": "#000000"
-    }
-  ],
-  "arrows": [
-    {
-      "wayPoints": [[0.734, 9.266], [0.932, 9.068]],
-      "headLength": 0.17,
-      "color": "#000000",
-      "thickness": 3.2
-    },
-    {
-      "wayPoints": [[5.734, 9.266], [5.932, 9.068]],
-      "headLength": 0.17,
-      "color": "#000000",
-      "thickness": 3.2
-    },
-    {
-      "wayPoints": [[-0.266, 2.734], [-0.068, 2.932]],
-      "headLength": 0.17,
-      "color": "#000000",
-      "thickness": 3.2
-    },
-    {
-      "wayPoints": [[-0.266, 7.734], [-0.068, 7.932]],
-      "headLength": 0.17,
-      "color": "#000000",
-      "thickness": 3.2
-    },
-    {
-      "wayPoints": [[2.734, -0.266], [2.932, -0.068]],
-      "headLength": 0.17,
-      "color": "#000000",
-      "thickness": 3.2
-    },
-    {
-      "wayPoints": [[9.266, 7.266], [9.068, 7.068]],
-      "headLength": 0.17,
-      "color": "#000000",
-      "thickness": 3.2
-    },
-    {
-      "wayPoints": [[-0.266, 3.266], [-0.068, 3.068]],
-      "headLength": 0.17,
-      "color": "#000000",
-      "thickness": 3.2
-    },
-    {
-      "wayPoints": [[-0.266, 5.734], [-0.068, 5.932]],
-      "headLength": 0.17,
-      "color": "#000000",
-      "thickness": 3.2
-    },
-    {
-      "wayPoints": [[7.734, -0.266], [7.932, -0.068]],
-      "headLength": 0.17,
-      "color": "#000000",
-      "thickness": 3.2
     }
   ]
 }
