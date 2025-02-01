@@ -1,1 +1,1 @@
-*Here's another entry in my "Experimental fog" series. Here I'm continuing to look at having the fog itself be meaningful, this time using Yin Yang rules. I'd love to hear how long it took you to complete, and any feedback on difficulty and rules clarity.*
+*Here's another entry in my "Experimental fog" series. Here I'm continuing to explore how fog clearance could itself be information, this time combining it with yin-yang rules.*
