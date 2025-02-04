@@ -10,7 +10,9 @@ export function processPuzzle(data) {
 }
 
 function addRules(data) {
-    data.metadata.rules = convert(RulesHtml, {wordwrap: false});
+    data.metadata.rules = convert(RulesHtml, {
+        wordwrap: false
+    }).replaceAll("\n\n *", "\n *");
 }
 
 function addMsgCorrect(data) {

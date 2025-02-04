@@ -1,0 +1,1 @@
+Solution code (for LMD): misticism
