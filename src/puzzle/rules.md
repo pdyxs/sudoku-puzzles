@@ -2,13 +2,14 @@ Sudoku: Fill the grid with digits 1 to 9, so that each digit occurs exactly once
 
 Yin Yang Fog: The grid is covered in fog. Once the puzzle is completed, any unshaded cells will be revealed, and shaded cells will still be covered in fog. All shaded cells are orthogonally connected, all unshaded cells are orthogonally connected and no 2x2 region is entirely shaded or entirely unshaded.
 
-Clearing Fog: Entering a correct digit in an unshaded cell will clear the fog:
-* in that cell;
-* in seen cells - any unshaded cells that can be seen from that cell in an orthogonal direction (with shaded cells blocking vision); and
-* around corners - any unshaded cells that are orthogonally connected to a seen cell
+Clearing Fog: Entering the correct digit in an unshaded cell will clear the fog in that cell, and in any adjacent unshaded cells.
 
-Unshaded Whispers: Any two orthogonally connected unshaded cells must have a difference of at least 5.
+Some Things Wrogn: Clues that are in unshaded cells are wrogn - that is, they are not 100% correct. All cells that are connected to a clue must be shaded or unshaded. When the fog lifts on an unshaded cell, it may reveal new clues, which will also be wrogn.
 
-Kropki: A white dot separates digits which are consecutive.
-
-Given Digits: White digits are given, but have not been entered into the grid.
+Clues:
+ * Kropki: Digits connected by a white dot are consecutive. When digits are connected by a black (or hollow) dot, one is double the other
+ * Region Sum lines: Region boundaries separate a thick solid line into segments, each of which sum to the same number
+ * German Whispers: Adjacent digits along a hollow line must differ by at least 5
+ * Arrows: Digits along an arrow sum to the digit in the (thicker) circle
+ * Counting circles: A digit N in a circle (including the arrow circles) appears in circles exactly N times
+ * A given digit has the value shown
