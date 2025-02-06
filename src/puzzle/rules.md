@@ -4,7 +4,7 @@ Yin Yang Fog: The grid is covered in fog. Once the puzzle is completed, any unsh
 
 Clearing Fog: Entering the correct digit in an unshaded cell will clear the fog in that cell, and in any adjacent unshaded cells.
 
-Some Things Wrogn: Clues that are in unshaded cells are wrogn - that is, they are not 100% correct. All cells that are connected to a clue must be shaded or unshaded. When the fog lifts on an unshaded cell, it may reveal new clues, which will also be wrogn.
+Some Things Wrogn: Clues that are in unshaded cells are wrogn - that is, they are not 100% correct. Cells connected to the same clue must either be all shaded or all unshaded. When the fog lifts on an unshaded cell, it may reveal new clues, which will also be wrogn.
 
 Clues:
  * Kropki: Digits connected by a white dot are consecutive. When digits are connected by a black (or hollow) dot, one is double the other

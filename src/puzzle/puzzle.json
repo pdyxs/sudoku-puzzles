@@ -191,20 +191,6 @@
     },
     {
       "wayPoints": [
-        [4.5, 0.5],
-        [3.5, 1.5],
-        [4.5, 2.5],
-        [4.5, 3.5],
-        [4.5, 4.5],
-        [3.5, 4.5],
-        [3.5, 5.5]
-      ],
-      "color": "#aaa",
-      "thickness": 9.6,
-      "target": "overlay"
-    },
-    {
-      "wayPoints": [
         [6.5, 6.5],
         [5.5, 6.5],
         [4.5, 7.5],
@@ -370,7 +356,16 @@
       "backgroundColor": "#000000"
     },
     {
-      "center": [7, 6.5],
+      "center": [7, 6.72],
+      "width": 0.33,
+      "height": 0.33,
+      "text": "",
+      "color": "#FFFFFF",
+      "rounded": true,
+      "backgroundColor": "#000000"
+    },
+    {
+      "center": [7, 6.28],
       "width": 0.34,
       "height": 0.34,
       "thickness": 1.28,
