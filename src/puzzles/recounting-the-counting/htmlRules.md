@@ -1,0 +1,1 @@
+*Some of the rules are variations on standard rulesets - I've highlighted some key variations in <span style="color: green">green</span>.*

@@ -5,7 +5,7 @@ import { series } from "./puzzles";
 const {
     name: seriesName,
     puzzles
-} = series[2];
+} = series[0];
 
 const {
     puzzle,

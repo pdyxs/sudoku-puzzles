@@ -1,0 +1,1 @@
+*This is an approachable puzzle, based on the idea that a counting circle's value might need to change if more counting circles are revealed.*
