@@ -12,8 +12,10 @@ const {
     process,
     rules,
     msgCorrect,
-    preamble
-} = puzzles[0];
+    preamble,
+    sudokupad,
+    imgId
+} = puzzles[1];
 
 const processedPuzzle = process(puzzle);
 
@@ -90,9 +92,28 @@ document.getElementById("puzzle-rules").innerHTML = rules;
 document.getElementById("puzzle-preamble").innerHTML = preamble;
 document.getElementById("puzzle-msgcorrect").innerHTML = msgCorrect;
 document.getElementById("generateUrl").setAttribute("href", "https://sudokupad.app/" + encodeSCLPuz(processedPuzzle))
-//document.getElementById("post").innerHTML = post;
+
+if (sudokupad !== undefined) {
+    document.getElementById("sudokupad-link").setAttribute("href", sudokupad);
+}
+
+const otherSeriesPuzzles = puzzles.filter(p => p.lmd !== undefined && p.puzzle?.metadata?.title !== puzzle?.metadata?.title);
+if (otherSeriesPuzzles.length > 0) {
+    let postHtml = `<h4 style="margin-bottom: 0">More ${seriesName} puzzles:</h4>\n<ul style="margin-top: 0.4em">\n`;
+    postHtml += otherSeriesPuzzles.map(({puzzle, lmd}) => `\t<li><a href="${lmd}">${puzzle.metadata.title}</a></li>`).join("\n");
+    postHtml += "\n</ul>";
+    document.getElementById("post").innerHTML = postHtml;
+}
 
 //HTML
-const sources = document.getElementById("html-container").querySelectorAll(":scope > div");
-const htmls = Array.from(sources).map(s => s.innerHTML).join("\n\n");
-document.getElementById("html-pre").innerText = htmls;
+const preSources = document.getElementById("html-pre-image").querySelectorAll(":scope > div");
+const postSources = document.getElementById("html-post-image").querySelectorAll(":scope > div");
+const preHtml = Array.from(preSources).map(s => s.innerHTML).join("\n\n");
+const postHtml = Array.from(postSources).map(s => s.innerHTML).join("\n\n");
+let imageHtml = "";
+if (imgId !== undefined) {
+    document.getElementById("image-placeholder").innerHTML = `Image id: ${imgId}`;
+    imageHtml = `<div style="clear:both;text-align:center"><img:${imgId}></div>`;
+} 
+
+document.getElementById("html-pre").innerText = preHtml + imageHtml + postHtml;
