@@ -1,0 +1,524 @@
+{
+  "id": "sxsm_pdyxs_5cac6d2cc83032aba06da85c0573914e",
+  "metadata": {
+    "source": "Sudoku Maker v2024.12.15-dev-d91fb20",
+    "author": "pdyxs",
+    "solution": "............................914568723....283147956....765239418....349726185....872451369....651983247....597814632....438692571....126375894............................",
+    "title": "The grid of forking paths"
+  },
+  "foglight": [
+    [8, 4],
+    [10, 4],
+    [11, 4],
+    [9, 4],
+    [12, 4],
+    [12, 3],
+    [12, 2],
+    [12, 1],
+    [12, 0],
+    [11, 1],
+    [11, 2],
+    [11, 3],
+    [10, 3],
+    [9, 3],
+    [8, 3],
+    [10, 2],
+    [9, 2],
+    [8, 2],
+    [10, 1],
+    [9, 1],
+    [8, 1],
+    [9, 0],
+    [11, 0],
+    [10, 0],
+    [8, 0]
+  ],
+  "triggereffect": [
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c9,r3c10,r4c8,r4c9,r4c10,r5c7,r5c8,r5c9,r5c10,r6c6,r6c7,r6c8,r6c9,r7c6,r7c7,r7c8,r7c9,r8c6,r8c7,r8c8,r8c9,r9c6,r9c7,r9c8,r4c7"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r4c7r3c7r2c7r1c7r1c8r2c8r3c8r5c6r4c6r3c6r2c6r1c6r1c5r2c5r3c5r4c5r5c5r4c4r4c3r4c2r4c1r3c1r3c2r3c3r3c4r2c4r2c3r2c2r2c1r1c1r1c2r1c3r1c4"
+      }
+    },
+    {
+      "trigger": {"type": "cellvalue", "cell": "r3c3,r3c4,r3c5,r3c6,r3c7,r3c8,r4c3,r4c4,r4c5,r4c6,r4c7,r5c5,r5c6,r5c4"},
+      "effect": {"type": "foglight", "cells": "r5c4r5c3r5c2r5c1r6c1r6c2r6c3r6c4r6c5r7c5r7c4r7c3r7c2r7c1r8c1r8c2r8c3r8c4r8c5"}
+    },
+    {
+      "trigger": {"type": "cellvalue", "cell": "r5c3,r5c4,r6c3,r6c4,r6c5,r7c3,r7c4,r7c5,r8c3,r8c4,r8c5,r5c5"},
+      "effect": {
+        "type": "foglight",
+        "cells": "r5c5r5c6r4c6r3c6r2c6r4c7r3c7r2c7r1c7r1c8r2c8r3c8r1c6r1c5r1c4r1c3r1c2r1c1r2c1r2c2r2c3r2c4r2c5r3c5r3c4r3c3r3c2r3c1r4c1r4c2r4c3r4c4r4c5"
+      }
+    },
+    {
+      "trigger": {"type": "cellvalue", "cell": "r3c3,r3c4,r3c5,r3c6,r3c7,r3c8,r4c3,r4c4,r4c5,r4c6,r4c7,r5c5,r5c6,r5c7"},
+      "effect": {
+        "type": "foglight",
+        "cells": "r5c7r6c7r7c7r8c7r9c7r9c6r8c6r7c6r6c6r9c8r8c8r7c8r6c8r5c8r4c8r4c9r5c9r6c9r7c9r8c9r5c10r4c10r3c10r2c10r1c10r1c9r2c9r3c9"
+      }
+    },
+    {
+      "trigger": {"type": "cellvalue", "cell": "r9c3,r9c4,r9c5,r10c3,r10c4,r10c5,r11c3,r11c4,r11c5,r8c3"},
+      "effect": {"type": "foglight", "cells": "r8c1r8c2r8c3r8c4r8c5r7c5r6c5r7c4r6c4r5c4r5c3r7c3r6c3r6c2r7c2r5c2r5c1r6c1r7c1"}
+    },
+    {
+      "trigger": {"type": "cellvalue", "cell": "r9c9,r6c10,r7c10,r8c10,r9c10,r3c11,r4c11,r5c11,r6c11,r7c11,r8c11,r9c11,r8c9"},
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c9r7c9r6c9r8c8r8c7r9c7r9c8r9c6r8c6r7c6r6c6r6c7r7c7r7c8r6c8r5c8r5c7r5c9r4c8r4c9r4c10r5c10r3c10r2c10r1c10r3c9r2c9r1c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c9,r3c10,r4c8,r4c9,r4c10,r5c7,r5c8,r5c9,r5c10,r6c6,r6c7,r6c8,r6c9,r7c6,r7c7,r7c8,r7c9,r8c6,r8c7,r8c8,r8c9,r9c6,r9c7,r9c8,r8c10"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r9c10r9c11r9c9r8c10r7c10r6c10r6c11r7c11r8c11r5c11r4c11r3c11r2c11r1c11r1c12r1c13r2c13r3c13r4c13r5c13r6c13r7c13r8c13r9c13r9c12r8c12r7c12r6c12r5c12r4c12r3c12r2c12"
+      }
+    },
+    {
+      "trigger": {"type": "cellvalue", "cell": "r10c6,r10c7,r10c8,r10c9,r10c11,r11c6,r11c7,r11c8,r11c9,r11c10,r11c11,r9c11"},
+      "effect": {
+        "type": "foglight",
+        "cells": "r9c10r9c11r9c12r9c13r8c13r7c13r6c13r5c13r4c13r3c13r9c9r8c10r7c10r6c10r6c11r7c11r8c11r5c11r4c11r3c11r2c11r1c11r1c12r2c12r3c12r4c12r5c12r6c12r7c12r8c12r2c13r1c13"
+      }
+    },
+    {
+      "trigger": {"type": "cellvalue", "cell": "r9c9,r6c10,r7c10,r8c10,r9c10,r3c11,r4c11,r5c11,r6c11,r7c11,r8c11,r9c11,r10c11"},
+      "effect": {
+        "type": "foglight",
+        "cells": "r10c11r10c10r10c9r10c8r10c7r10c6r11c6r12c6r13c6r13c7r12c7r11c7r11c8r12c8r13c8r13c9r12c9r11c9r11c10r12c10r13c10r13c11r12c11r11c11r11c12r12c12r13c12r13c13r12c13r11c13r10c13r10c12"
+      }
+    },
+    {
+      "trigger": {"type": "cellvalue", "cell": "r9c3,r9c4,r9c5,r10c3,r10c4,r10c5,r11c3,r11c4,r11c5,r11c6"},
+      "effect": {
+        "type": "foglight",
+        "cells": "r11c6r10c6r10c7r11c7r10c8r11c8r12c6r13c6r13c7r13c8r13c9r13c10r13c11r13c12r13c13r12c13r11c13r10c13r10c12r10c11r10c10r10c9r11c9r11c10r11c11r11c12r12c12r12c11r12c10r12c9r12c8r12c7"
+      }
+    }
+  ],
+  "cells": [
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+  ],
+  "regions": [
+    [[2, 2], [2, 3], [2, 4], [3, 2], [3, 3], [3, 4], [4, 2], [4, 3], [4, 4]],
+    [[2, 5], [2, 6], [2, 7], [3, 5], [3, 6], [3, 7], [4, 5], [4, 6], [4, 7]],
+    [[2, 8], [2, 9], [2, 10], [3, 8], [3, 9], [3, 10], [4, 8], [4, 9], [4, 10]],
+    [[5, 2], [5, 3], [5, 4], [6, 2], [6, 3], [6, 4], [7, 2], [7, 3], [7, 4]],
+    [[5, 5], [5, 6], [5, 7], [6, 5], [6, 6], [6, 7], [7, 5], [7, 6], [7, 7]],
+    [[5, 8], [5, 9], [5, 10], [6, 8], [6, 9], [6, 10], [7, 8], [7, 9], [7, 10]],
+    [[8, 8], [8, 9], [8, 10], [9, 8], [9, 9], [9, 10], [10, 8], [10, 9], [10, 10]],
+    [[8, 5], [8, 6], [8, 7], [9, 5], [9, 6], [9, 7], [10, 5], [10, 6], [10, 7]],
+    [[8, 2], [8, 3], [8, 4], [9, 2], [9, 3], [9, 4], [10, 2], [10, 3], [10, 4]]
+  ],
+  "lines": [
+    {"wayPoints": [[2.5, 4.5], [2.5, 5.5], [3.5, 4.5], [3.5, 2.5], [2.5, 2.5]], "color": "#000000", "thickness": 6.4},
+    {"wayPoints": [[4.5, 5.5], [3.5, 5.5], [3.5, 6.5], [2.5, 7.5]], "color": "#000000", "thickness": 6.4},
+    {"wayPoints": [[2.5, 8.5], [3.5, 9.5], [2.5, 9.5], [3.5, 8.5]], "color": "#000000", "thickness": 6.4},
+    {"wayPoints": [[6.5, 8.5], [7.5, 7.5], [8.5, 7.5], [8.5, 6.5]], "color": "#000000", "thickness": 6.4},
+    {"wayPoints": [[2.5, 5.7], [3.3, 5.7], [2.5, 6.5]], "color": "#000000", "thickness": 6.4},
+    {"wayPoints": [[8.5, 5.5], [7.7, 6.3], [7.7, 5.3], [6.7, 6.3]], "color": "#000000", "thickness": 6.4},
+    {"wayPoints": [[6.3, 6.7], [4.5, 8.5], [3.7, 8.5]], "color": "#000000", "thickness": 6.4},
+    {"wayPoints": [[2.5, 4.5], [2.5, 5.5], [3.5, 4.5], [3.5, 2.5], [2.5, 2.5]], "color": "#FFFFFF", "thickness": 5.12},
+    {"wayPoints": [[4.5, 5.5], [3.5, 5.5], [3.5, 6.5], [2.5, 7.5]], "color": "#FFFFFF", "thickness": 5.12},
+    {"wayPoints": [[2.5, 8.5], [3.5, 9.5], [2.5, 9.5], [3.5, 8.5]], "color": "#FFFFFF", "thickness": 5.12},
+    {"wayPoints": [[6.5, 8.5], [7.5, 7.5], [8.5, 7.5], [8.5, 6.5]], "color": "#FFFFFF", "thickness": 5.12},
+    {"wayPoints": [[2.5, 5.7], [3.3, 5.7], [2.5, 6.5]], "color": "#FFFFFF", "thickness": 5.12},
+    {"wayPoints": [[8.5, 5.5], [7.7, 6.3], [7.7, 5.3], [6.7, 6.3]], "color": "#FFFFFF", "thickness": 5.12},
+    {"wayPoints": [[6.3, 6.7], [4.5, 8.5], [3.7, 8.5]], "color": "#FFFFFF", "thickness": 5.12},
+    {"wayPoints": [[10.5, 5.5], [9.5, 5.5], [9.5, 6.5]], "color": "#aaaf", "thickness": 3.2},
+    {"wayPoints": [[9.5, 7.5], [10.5, 7.5], [10.5, 6.5]], "color": "#aaaf", "thickness": 3.2},
+    {"wayPoints": [[8.5, 10.5], [6.5, 10.5]], "color": "#aaaf", "thickness": 3.2},
+    {"wayPoints": [[5.5, 8.5], [6.5, 7.5], [7.5, 8.5], [7.5, 7.5], [6.5, 6.5], [7.5, 6.5]], "color": "#aaaf", "thickness": 3.2},
+    {"wayPoints": [[5.5, 2.5], [5.5, 3.5], [4.5, 2.5]], "color": "#aaaf", "thickness": 3.2},
+    {"wayPoints": [[7.5, 4.5], [6.5, 3.5], [6.5, 2.5]], "color": "#aaaf", "thickness": 3.2},
+    {"wayPoints": [[6.5, 4.5], [5.7, 3.7], [5.1, 3.7], [5.3, 3.7]], "color": "#aaaf", "thickness": 3.2},
+    {"wayPoints": [[5.1, 3.7], [4.5, 3.7]], "color": "#aaaf", "thickness": 3.2},
+    {"wayPoints": [[10.7, 2.5], [10.7, 3.3], [9.3, 3.3], [8.5, 2.5]], "color": "#aaaf", "thickness": 3.2},
+    {"wayPoints": [[10.5, 2.3], [8.3, 2.3], [8.3, 3.5]], "color": "#aaaf", "thickness": 3.2},
+    {"wayPoints": [[10.5, 3.5], [10.5, 4.5], [9.5, 4.5]], "color": "#aaaf", "thickness": 3.2}
+  ],
+  "overlays": [
+    {"center": [6.5, 0.98], "width": 2, "height": 13.02, "backgroundColor": "#ffff"},
+    {"center": [6.5, 12.02], "width": 2, "height": 13.02, "backgroundColor": "#ffff"},
+    {"center": [0.98, 6.5], "width": 9.02, "height": 2, "backgroundColor": "#ffff"},
+    {"center": [12.02, 6.5], "width": 9.02, "height": 2, "backgroundColor": "#ffff"},
+    {"center": [10.5, 1.05], "width": 1.9, "height": 4.8, "backgroundColor": "#0663"},
+    {"center": [11.95, 3.45], "width": 2.9, "height": 1.9, "backgroundColor": "#0663"},
+    {
+      "stroke": "#ffffff",
+      "angle": 0,
+      "center": [11.25, 2.5],
+      "width": 0,
+      "height": 0.504,
+      "text": "Fibonacci Thermos",
+      "fontSize": 15,
+      "color": "#000000",
+      "rounded": true
+    },
+    {
+      "stroke": "#ffffff",
+      "angle": 0,
+      "center": [11.55, 2.5],
+      "width": 0,
+      "height": 0.504,
+      "text": "Digits increase or stay the same,",
+      "fontSize": 13,
+      "color": "#000000",
+      "rounded": true
+    },
+    {
+      "stroke": "#ffffff",
+      "angle": 0,
+      "center": [11.9, 2.5],
+      "width": 0,
+      "height": 0.504,
+      "text": "starting from the bulb. Starting from",
+      "fontSize": 13,
+      "color": "#000000",
+      "rounded": true
+    },
+    {
+      "stroke": "#ffffff",
+      "angle": 0,
+      "center": [12.25, 2.5],
+      "width": 0,
+      "height": 0.504,
+      "text": "the 3rd digit, digits are the sum of",
+      "fontSize": 13,
+      "color": "#000000",
+      "rounded": true
+    },
+    {
+      "stroke": "#ffffff",
+      "angle": 0,
+      "center": [12.6, 2.5],
+      "width": 0,
+      "height": 0.504,
+      "text": "the previous 2 digits",
+      "fontSize": 13,
+      "color": "#000000",
+      "rounded": true
+    },
+    {"center": [11.95, 9], "width": 7.8, "height": 1.9, "backgroundColor": "#0633"},
+    {"center": [10.05, 11.95], "width": 1.9, "height": 1.9, "backgroundColor": "#0633"},
+    {
+      "stroke": "#ffffff",
+      "angle": 0,
+      "center": [11.25, 9],
+      "width": 0,
+      "height": 0.504,
+      "text": "Common differences",
+      "fontSize": 15,
+      "color": "#000000",
+      "rounded": true
+    },
+    {
+      "stroke": "#ffffff",
+      "angle": 0,
+      "center": [11.75, 9],
+      "width": 0,
+      "height": 0.504,
+      "text": "All pairs with a specific difference are marked",
+      "fontSize": 13,
+      "color": "#000000",
+      "rounded": true
+    },
+    {
+      "stroke": "#ffffff",
+      "angle": 0,
+      "center": [12.1, 9],
+      "width": 0,
+      "height": 0.504,
+      "text": "with a diamond.",
+      "fontSize": 13,
+      "color": "#000000",
+      "rounded": true
+    },
+    {
+      "stroke": "#ffffff",
+      "angle": 0,
+      "center": [12.45, 9],
+      "width": 0,
+      "height": 0.504,
+      "text": "The difference indicated may change from room to room",
+      "fontSize": 13,
+      "color": "#000000",
+      "rounded": true
+    },
+    {"center": [4.5, 11.95], "width": 1.9, "height": 8.8, "backgroundColor": "#0603"},
+    {"center": [1.05, 10.55], "width": 0.9, "height": 1.9, "backgroundColor": "#0603"},
+    {
+      "stroke": "#ffffff",
+      "angle": 90,
+      "center": [4.5, 12.5],
+      "width": 0,
+      "height": 0.504,
+      "text": "Internal Skyscrapers",
+      "fontSize": 15,
+      "color": "#000000",
+      "rounded": true
+    },
+    {
+      "stroke": "#ffffff",
+      "angle": 90,
+      "center": [4.5, 12],
+      "width": 0,
+      "height": 0.504,
+      "text": "A digit n represents a skyscraper with a height n",
+      "fontSize": 13,
+      "color": "#000000",
+      "rounded": true
+    },
+    {
+      "stroke": "#ffffff",
+      "angle": 90,
+      "center": [4.5, 11.65],
+      "width": 0,
+      "height": 0.504,
+      "text": "A digit with an arrow shows how many skyscrapers in the same room",
+      "fontSize": 13,
+      "color": "#000000",
+      "rounded": true
+    },
+    {
+      "stroke": "#ffffff",
+      "angle": 90,
+      "center": [4.5, 11.3],
+      "width": 0,
+      "height": 0.504,
+      "text": "can be seen in each direction shown (not including itself)",
+      "fontSize": 13,
+      "color": "#000000",
+      "rounded": true
+    },
+    {"center": [1.05, 9], "width": 1.8, "height": 1.9, "backgroundColor": "#6003"},
+    {"center": [6, 1.05], "width": 1.9, "height": 3.8, "backgroundColor": "#0363"},
+    {
+      "stroke": "#ffffff",
+      "angle": 270,
+      "center": [6, 0.4],
+      "width": 0,
+      "height": 0.504,
+      "text": "Knightly parity",
+      "fontSize": 15,
+      "color": "#000000",
+      "rounded": true
+    },
+    {
+      "stroke": "#ffffff",
+      "angle": 270,
+      "center": [6, 0.75],
+      "width": 0,
+      "height": 0.504,
+      "text": "A digit in a diamond has the",
+      "fontSize": 13,
+      "color": "#000000",
+      "rounded": true
+    },
+    {
+      "stroke": "#ffffff",
+      "angle": 270,
+      "center": [6, 1.1],
+      "width": 0,
+      "height": 0.504,
+      "text": "same parity as all digits in",
+      "fontSize": 13,
+      "color": "#000000",
+      "rounded": true
+    },
+    {
+      "stroke": "#ffffff",
+      "angle": 270,
+      "center": [6, 1.45],
+      "width": 0,
+      "height": 0.504,
+      "text": "the same room that are a",
+      "fontSize": 13,
+      "color": "#000000",
+      "rounded": true
+    },
+    {
+      "stroke": "#ffffff",
+      "angle": 270,
+      "center": [6, 1.8],
+      "width": 0,
+      "height": 0.504,
+      "text": "knight's move away",
+      "fontSize": 13,
+      "color": "#000000",
+      "rounded": true
+    },
+    {"center": [2, 1.05], "width": 1.9, "height": 3.8, "backgroundColor": "#0063"},
+    {"center": [1.05, 4.95], "width": 5.9, "height": 1.9, "backgroundColor": "#0063"},
+    {
+      "stroke": "#ffffff",
+      "angle": 0,
+      "center": [0.75, 4],
+      "width": 0,
+      "height": 0.504,
+      "text": "Difference thermos",
+      "fontSize": 15,
+      "color": "#000000",
+      "rounded": true
+    },
+    {
+      "stroke": "#ffffff",
+      "angle": 0,
+      "center": [1.25, 4],
+      "width": 0,
+      "height": 0.504,
+      "text": "The differences between digits increase,",
+      "fontSize": 13,
+      "color": "#000000",
+      "rounded": true
+    },
+    {
+      "stroke": "#ffffff",
+      "angle": 0,
+      "center": [1.6, 4],
+      "width": 0,
+      "height": 0.504,
+      "text": "starting at the bulb",
+      "fontSize": 13,
+      "color": "#000000",
+      "rounded": true
+    },
+    {
+      "center": [8, 2.5],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [4.5, 4],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [4, 6.5],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {"center": [10.5, 5], "width": 0.33, "height": 0.33, "text": "", "color": "#FFFFFF", "rounded": true, "backgroundColor": "#000000"},
+    {"center": [9, 10.5], "width": 0.33, "height": 0.33, "text": "", "color": "#FFFFFF", "rounded": true, "backgroundColor": "#000000"},
+    {"center": [7.5, 9], "width": 0.33, "height": 0.33, "text": "", "color": "#FFFFFF", "rounded": true, "backgroundColor": "#000000"},
+    {"angle": 45, "center": [10, 5.5], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"},
+    {"angle": 45, "center": [9.5, 6], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"},
+    {"angle": 45, "center": [10, 7.5], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"},
+    {"angle": 45, "center": [9.5, 8], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"},
+    {"angle": 45, "center": [10.5, 8], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"},
+    {"angle": 45, "center": [10, 8.5], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"},
+    {"angle": 45, "center": [10, 10.5], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"},
+    {"angle": 45, "center": [7, 10.5], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"},
+    {"angle": 45, "center": [7, 9.5], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"},
+    {"angle": 45, "center": [6, 9.5], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"},
+    {"angle": 45, "center": [4, 10.5], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"},
+    {"angle": 45, "center": [3, 9.5], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"},
+    {"angle": 45, "center": [4.5, 9], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"},
+    {"angle": 45, "center": [5, 8.5], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"},
+    {"angle": 45, "center": [5, 7.5], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"},
+    {"angle": 45, "center": [6, 5.5], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"},
+    {"angle": 45, "center": [6, 6.5], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"},
+    {"angle": 45, "center": [7, 6.5], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"},
+    {"angle": 45, "center": [8.5, 7], "width": 0.22, "height": 0.22, "thickness": 1.28, "backgroundColor": "#000000", "borderColor": "#000000"}
+  ],
+  "underlays": [
+    {"center": [10.5, 2.5], "width": 4.8, "height": 4.8, "backgroundColor": "#0663"},
+    {"center": [10.05, 8.05], "width": 5.9, "height": 1.9, "backgroundColor": "#0633"},
+    {"center": [8.5, 9.55], "width": 2.9, "height": 0.8, "backgroundColor": "#0603"},
+    {"center": [6.6, 10.05], "width": 1.9, "height": 3, "backgroundColor": "#0603"},
+    {"center": [3.55, 10.55], "width": 0.9, "height": 3.1, "backgroundColor": "#0603"},
+    {"center": [7, 6.5], "width": 2.8, "height": 3.8, "backgroundColor": "#6003"},
+    {"center": [4.6, 6.6], "width": 1, "height": 1, "backgroundColor": "#6003"},
+    {"center": [4.1, 7.6], "width": 1, "height": 2, "backgroundColor": "#6003"},
+    {"center": [6.5, 8.4], "width": 1, "height": 2.8, "backgroundColor": "#6003"},
+    {"center": [3.55, 8.5], "width": 0.8, "height": 3.1, "backgroundColor": "#6003"},
+    {"center": [3.45, 9.4], "width": 1, "height": 2.9, "backgroundColor": "#6003"},
+    {"center": [6.5, 3.45], "width": 2.9, "height": 2.8, "backgroundColor": "#0363"},
+    {"center": [4.6, 2.95], "width": 1.9, "height": 1, "backgroundColor": "#0363"},
+    {"center": [2.95, 4.45], "width": 4.9, "height": 1.9, "backgroundColor": "#0063"},
+    {"center": [4.4, 5], "width": 1.8, "height": 1, "backgroundColor": "#0063"},
+    {"center": [2.45, 7.4], "width": 1, "height": 0.9, "backgroundColor": "#0063"},
+    {"angle": 45, "center": [7.5, 2.5], "width": 0.44, "height": 0.44, "thickness": 1.28, "backgroundColor": "#FFFFFF", "borderColor": "#000000"},
+    {"angle": 45, "center": [4.5, 2.5], "width": 0.44, "height": 0.44, "thickness": 1.28, "backgroundColor": "#FFFFFF", "borderColor": "#000000"},
+    {"angle": 45, "center": [4.5, 3.5], "width": 0.44, "height": 0.44, "thickness": 1.28, "backgroundColor": "#FFFFFF", "borderColor": "#000000"},
+    {"angle": 45, "center": [2.5, 3.5], "width": 0.44, "height": 0.44, "thickness": 1.28, "backgroundColor": "#FFFFFF", "borderColor": "#000000"},
+    {"angle": 45, "center": [2.5, 4.5], "width": 0.44, "height": 0.44, "thickness": 1.28, "backgroundColor": "#FFFFFF", "borderColor": "#000000"},
+    {"angle": 45, "center": [4.5, 5.5], "width": 0.44, "height": 0.44, "thickness": 1.28, "backgroundColor": "#FFFFFF", "borderColor": "#000000"},
+    {"angle": 45, "center": [2.5, 8.5], "width": 0.44, "height": 0.44, "thickness": 1.28, "backgroundColor": "#FFFFFF", "borderColor": "#000000"},
+    {"angle": 45, "center": [5.5, 8.5], "width": 0.44, "height": 0.44, "thickness": 1.28, "backgroundColor": "#FFFFFF", "borderColor": "#000000"},
+    {"angle": 0, "center": [2.5, 4.5], "width": 0.2, "height": 0.2, "backgroundColor": "#000000"},
+    {"angle": 0, "center": [4.5, 5.5], "width": 0.2, "height": 0.2, "backgroundColor": "#000000"},
+    {"angle": 0, "center": [8.5, 5.5], "width": 0.2, "height": 0.2, "backgroundColor": "#000000"},
+    {"angle": 0, "center": [6.5, 8.5], "width": 0.2, "height": 0.2, "backgroundColor": "#000000"},
+    {"angle": 0, "center": [2.5, 8.5], "width": 0.2, "height": 0.2, "backgroundColor": "#000000"},
+    {"angle": 0, "center": [2.5, 5.7], "width": 0.2, "height": 0.2, "backgroundColor": "#000000"},
+    {"angle": 0, "center": [6.3, 6.7], "width": 0.2, "height": 0.2, "backgroundColor": "#000000"},
+    {"angle": 0, "center": [2.5, 4.5], "width": 0.18, "height": 0.18, "backgroundColor": "#FFFFFF"},
+    {"angle": 0, "center": [4.5, 5.5], "width": 0.18, "height": 0.18, "backgroundColor": "#FFFFFF"},
+    {"angle": 0, "center": [8.5, 5.5], "width": 0.18, "height": 0.18, "backgroundColor": "#FFFFFF"},
+    {"angle": 0, "center": [6.5, 8.5], "width": 0.18, "height": 0.18, "backgroundColor": "#FFFFFF"},
+    {"angle": 0, "center": [2.5, 8.5], "width": 0.18, "height": 0.18, "backgroundColor": "#FFFFFF"},
+    {"angle": 0, "center": [2.5, 5.7], "width": 0.18, "height": 0.18, "backgroundColor": "#FFFFFF"},
+    {"angle": 0, "center": [6.3, 6.7], "width": 0.18, "height": 0.18, "backgroundColor": "#FFFFFF"},
+    {"angle": 0, "center": [10.5, 3.5], "width": 0.2, "height": 0.2, "rounded": true, "backgroundColor": "#aaaf"},
+    {"angle": 0, "center": [5.5, 2.5], "width": 0.2, "height": 0.2, "rounded": true, "backgroundColor": "#aaaf"},
+    {"angle": 0, "center": [6.5, 4.5], "width": 0.2, "height": 0.2, "rounded": true, "backgroundColor": "#aaaf"},
+    {"angle": 0, "center": [7.5, 4.5], "width": 0.2, "height": 0.2, "rounded": true, "backgroundColor": "#aaaf"},
+    {"angle": 0, "center": [10.5, 5.5], "width": 0.2, "height": 0.2, "rounded": true, "backgroundColor": "#aaaf"},
+    {"angle": 0, "center": [9.5, 7.5], "width": 0.2, "height": 0.2, "rounded": true, "backgroundColor": "#aaaf"},
+    {"angle": 0, "center": [5.5, 8.5], "width": 0.2, "height": 0.2, "rounded": true, "backgroundColor": "#aaaf"},
+    {"angle": 0, "center": [8.5, 10.5], "width": 0.2, "height": 0.2, "rounded": true, "backgroundColor": "#aaaf"},
+    {"angle": 0, "center": [10.5, 2.3], "width": 0.2, "height": 0.2, "rounded": true, "backgroundColor": "#aaaf"},
+    {"angle": 0, "center": [10.7, 2.5], "width": 0.2, "height": 0.2, "rounded": true, "backgroundColor": "#aaaf"}
+  ],
+  "arrows": [
+    {"wayPoints": [[2.86, 10.5], [2.94, 10.5]], "headLength": 0.16, "color": "#000000", "thickness": 3.84},
+    {"wayPoints": [[4.86, 6.5], [4.94, 6.5]], "headLength": 0.16, "color": "#000000", "thickness": 3.84},
+    {"wayPoints": [[8.5, 10.14], [8.5, 10.06]], "headLength": 0.16, "color": "#000000", "thickness": 3.84},
+    {"wayPoints": [[8.14, 10.5], [8.06, 10.5]], "headLength": 0.16, "color": "#000000", "thickness": 3.84},
+    {"wayPoints": [[8.14, 9.5], [8.06, 9.5]], "headLength": 0.16, "color": "#000000", "thickness": 3.84},
+    {"wayPoints": [[4.14, 9.5], [4.06, 9.5]], "headLength": 0.16, "color": "#000000", "thickness": 3.84},
+    {"wayPoints": [[6.14, 8.5], [6.06, 8.5]], "headLength": 0.16, "color": "#000000", "thickness": 3.84},
+    {"wayPoints": [[7.14, 7.5], [7.06, 7.5]], "headLength": 0.16, "color": "#000000", "thickness": 3.84},
+    {"wayPoints": [[6.5, 7.14], [6.5, 7.06]], "headLength": 0.16, "color": "#000000", "thickness": 3.84}
+  ]
+}

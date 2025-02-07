@@ -1,0 +1,1 @@
+*This puzzle is an experiment in choice - it asks you to make a choice at the start of the puzzle which will affect your experience of it. I hope you enjoy it!*
