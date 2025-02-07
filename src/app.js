@@ -1,15 +1,19 @@
 import { PuzzleZipper } from "./sudokupad/puzzlezipper";
 import { loadFPuzzle } from "./sudokupad/fpuzzlesdecoder";
-import { puzzles } from "./puzzles";
+import { series } from "./puzzles";
+
+const {
+    name: seriesName,
+    puzzles
+} = series[0];
 
 const {
     puzzle,
     process,
     rules,
     msgCorrect,
-    post,
     preamble
-} = puzzles[1];
+} = puzzles[0];
 
 const processedPuzzle = process(puzzle);
 
@@ -86,7 +90,7 @@ document.getElementById("puzzle-rules").innerHTML = rules;
 document.getElementById("puzzle-preamble").innerHTML = preamble;
 document.getElementById("puzzle-msgcorrect").innerHTML = msgCorrect;
 document.getElementById("generateUrl").setAttribute("href", "https://sudokupad.app/" + encodeSCLPuz(processedPuzzle))
-document.getElementById("post").innerHTML = post;
+//document.getElementById("post").innerHTML = post;
 
 //HTML
 const sources = document.getElementById("html-container").querySelectorAll(":scope > div");

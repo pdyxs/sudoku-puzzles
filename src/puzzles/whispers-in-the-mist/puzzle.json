@@ -1,0 +1,528 @@
+{
+  "id": "sxsm_pdyxs_7c5b1fd984b0528d6e1e17fb17ac7325",
+  "metadata": {
+    "source": "Sudoku Maker v2025.01.15-dev-9ed2a84",
+    "title": "Whispers in the mist",
+    "author": "pdyxs",
+    "solution": "843165927672839451915274368186943572237581649594627183729416835361758294458392716"
+  },
+  "foglight": [],
+  "triggereffect": [
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r1c7"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r1c7r2c7r1c8r1c9r2c9r2c6"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r1c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r1c8r1c7r1c9r2c7r2c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r1c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r1c9r1c8r1c7r2c9r3c9r4c9r5c9r6c9r4c8r6c8r2c7"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r3c2r4c2r5c2r6c2r2c4r2c5r2c6r2c7r3c4r3c6r2c2r6c3r1c7r2c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c3"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c3r2c2r2c4r2c5r2c6r2c7r3c2r3c4r3c6r1c7"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c4"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c4r3c4r4c4r2c5r2c6r2c7r2c3r2c2r3c2r3c6r1c7"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c5"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c5r2c6r2c7r2c4r2c3r2c2r3c2r3c4r3c6r1c7"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c6r3c6r2c7r2c5r2c4r2c3r2c2r1c7r3c4r3c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c7"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c7r1c7r2c6r2c5r2c4r2c3r2c2r1c8r3c6r3c4r3c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c9r1c9r3c9r4c9r5c9r6c9r1c8r4c8r6c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r3c2r2c2r4c2r5c2r6c2r2c3r6c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c4"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r3c4r4c4r2c4r2c3r2c5"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r3c6r2c6r2c5r2c7"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r3c9r2c9r1c9r4c9r5c9r6c9r4c8r6c8r1c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r4c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r4c2r3c2r2c2r5c2r6c2r2c3r6c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r4c4"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r4c4r3c4r2c4r2c3r2c5"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r4c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r4c8r4c9r3c9r5c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r4c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r4c9r3c9r2c9r1c9r5c9r6c9r4c8r1c8r6c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r5c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r5c2r6c2r4c2r3c2r2c2r2c3r6c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r5c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r5c6r6c6r6c5r6c7"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r5c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r5c9r6c9r4c9r3c9r2c9r1c9r6c8r1c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c2r6c3r5c2r4c2r3c2r2c2r7c3r2c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c3"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c3r6c2r7c3r8c3r5c2r8c2r8c4"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c5"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c5r6c6r6c7r6c8r6c9r5c6r7c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c6r5c6r6c7r6c8r6c9r6c5r5c9r7c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c7"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c7r6c6r6c5r6c8r6c9r7c8r5c9r5c6"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c8r6c9r6c7r6c6r6c5r7c8r8c8r5c9r5c6r8c7"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c9r6c8r6c7r6c6r6c5r5c9r4c9r3c9r2c9r1c9r1c8r4c8r5c6r7c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r7c3"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r7c3r6c3r8c3r6c2r8c2r8c4"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r7c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r7c8r8c8r6c8r6c7r8c7r6c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c2r8c3r8c4r7c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c3"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c3r8c2r8c4r7c3r6c3r6c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c4"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c4r8c3r8c2r7c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c6r8c7r8c8r7c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c7"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c7r8c6r8c8r7c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c8r7c8r6c8r8c7r8c6r6c7r6c9"
+      }
+    }
+  ],
+  "cages": [],
+  "cells": [
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}]
+  ],
+  "regions": [
+    [
+      [0, 0],
+      [0, 1],
+      [0, 2],
+      [1, 0],
+      [1, 1],
+      [1, 2],
+      [2, 0],
+      [2, 1],
+      [2, 2]
+    ],
+    [
+      [0, 3],
+      [0, 4],
+      [0, 5],
+      [1, 3],
+      [1, 4],
+      [1, 5],
+      [2, 3],
+      [2, 4],
+      [2, 5]
+    ],
+    [
+      [0, 6],
+      [0, 7],
+      [0, 8],
+      [1, 6],
+      [1, 7],
+      [1, 8],
+      [2, 6],
+      [2, 7],
+      [2, 8]
+    ],
+    [
+      [3, 0],
+      [3, 1],
+      [3, 2],
+      [4, 0],
+      [4, 1],
+      [4, 2],
+      [5, 0],
+      [5, 1],
+      [5, 2]
+    ],
+    [
+      [3, 3],
+      [3, 4],
+      [3, 5],
+      [4, 3],
+      [4, 4],
+      [4, 5],
+      [5, 3],
+      [5, 4],
+      [5, 5]
+    ],
+    [
+      [3, 6],
+      [3, 7],
+      [3, 8],
+      [4, 6],
+      [4, 7],
+      [4, 8],
+      [5, 6],
+      [5, 7],
+      [5, 8]
+    ],
+    [
+      [6, 0],
+      [6, 1],
+      [6, 2],
+      [7, 0],
+      [7, 1],
+      [7, 2],
+      [8, 0],
+      [8, 1],
+      [8, 2]
+    ],
+    [
+      [6, 3],
+      [6, 4],
+      [6, 5],
+      [7, 3],
+      [7, 4],
+      [7, 5],
+      [8, 3],
+      [8, 4],
+      [8, 5]
+    ],
+    [
+      [6, 6],
+      [6, 7],
+      [6, 8],
+      [7, 6],
+      [7, 7],
+      [7, 8],
+      [8, 6],
+      [8, 7],
+      [8, 8]
+    ]
+  ],
+  "lines": [
+    {
+      "wayPoints": [[1.25,1.3], [1.25,1.65], [1.75, 1.4]],
+      "color": "#fff",
+      "thickness": 6,
+      "target": "cell-grids"
+    }
+  ],
+  "overlays": [
+    {
+      "center": [1.5, 7],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [2.5, 6],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [6, 5.5],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    }
+  ]
+}

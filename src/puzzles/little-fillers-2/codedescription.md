@@ -1,0 +1,1 @@
+The values of the four blank clues above the grid, from left to right and with dashes ('-') between them

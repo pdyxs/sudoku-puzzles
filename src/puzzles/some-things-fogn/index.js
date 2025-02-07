@@ -1,6 +1,5 @@
 import rules from "./rules.md";
 import msgCorrect from "./msgcorrect.md";
-import post from "./post.md";
 import preamble from "./preamble.md";
 import puzzle from "./puzzle.json";
 import { addMsgCorrect, addRules } from "../../processing/messages";
@@ -30,6 +29,5 @@ export default {
     },
     rules,
     msgCorrect,
-    post,
     preamble
 };
