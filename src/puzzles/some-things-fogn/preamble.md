@@ -1,0 +1,1 @@
+*Here's another entry in my "Experimental fog" series. Here I'm continuing to explore how fog clearance could itself be information, this time combining it with yin-yang rules.*

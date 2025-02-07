@@ -1,13 +1,17 @@
-import PuzzleRulesHtml from "./puzzle/rules.md";
-import PuzzleMessageCorrectHTML from "./puzzle/msgcorrect.md";
-import PuzzlePreambleHtml from "./puzzle/preamble.md";
-import PuzzlePostHtml from "./puzzle/post.md";
-import puzzle from "./puzzle/puzzle.json";
 import { PuzzleZipper } from "./sudokupad/puzzlezipper";
 import { loadFPuzzle } from "./sudokupad/fpuzzlesdecoder";
-import { processPuzzle } from "./puzzle/process";
+import { puzzles } from "./puzzles";
 
-const processedPuzzle = processPuzzle(puzzle);
+const {
+    puzzle,
+    process,
+    rules,
+    msgCorrect,
+    post,
+    preamble
+} = puzzles[1];
+
+const processedPuzzle = process(puzzle);
 
 const iframe = document.getElementById("frame");
 
@@ -78,11 +82,11 @@ function encodeSCLPuz(puzzle) {
 
 //Overview
 document.getElementById("puzzle-title").innerHTML = processedPuzzle.metadata.title;
-document.getElementById("puzzle-rules").innerHTML = PuzzleRulesHtml;
-document.getElementById("puzzle-preamble").innerHTML = PuzzlePreambleHtml;
-document.getElementById("puzzle-msgcorrect").innerHTML = PuzzleMessageCorrectHTML;
+document.getElementById("puzzle-rules").innerHTML = rules;
+document.getElementById("puzzle-preamble").innerHTML = preamble;
+document.getElementById("puzzle-msgcorrect").innerHTML = msgCorrect;
 document.getElementById("generateUrl").setAttribute("href", "https://sudokupad.app/" + encodeSCLPuz(processedPuzzle))
-document.getElementById("post").innerHTML = PuzzlePostHtml;
+document.getElementById("post").innerHTML = post;
 
 //HTML
 const sources = document.getElementById("html-container").querySelectorAll(":scope > div");

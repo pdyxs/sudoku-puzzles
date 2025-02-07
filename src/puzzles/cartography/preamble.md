@@ -1,0 +1,1 @@
+*What if the fog clearance **was** the information...?*
