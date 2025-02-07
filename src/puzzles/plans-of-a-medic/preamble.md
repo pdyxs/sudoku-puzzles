@@ -1,0 +1,3 @@
+*This is a puzzle based on the board game Pandemic, where I've tried to recreate some of the experience of the game. In it, you start off at a city and need to move from one city to another in order to treat diseases, prevent outbreaks and find cures.*
+
+*The rules for this one ended up pretty complex, and I've added some examples of how it all works below. It's more complicated than I'd like (I probably should have given up on the solver drawing their own paths), but I think there's some fun ideas here. Let me know what you think!*

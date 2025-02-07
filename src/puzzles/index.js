@@ -3,6 +3,7 @@ import someThingsFogn from "./some-things-fogn";
 import aMurderMostFogged from "./a-murder-most-fogged";
 import littleFillers2 from "./little-fillers-2";
 import whispersInTheMist from "./whispers-in-the-mist";
+import plansOfAMedic from "./plans-of-a-medic";
 
 export const series = [
     {
@@ -21,7 +22,10 @@ export const series = [
         ]
     },
     {
-        name: "Wordoku",
-        puzzles: []
+        name: "other",
+        hidePuzzleList: true,
+        puzzles: [
+            plansOfAMedic
+        ]
     }
 ];
