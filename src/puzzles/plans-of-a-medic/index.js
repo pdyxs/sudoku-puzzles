@@ -13,4 +13,5 @@ export default {
     msgCorrect: "",
     preamble,
     lmd: "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000LMU",
+    imgId: "000SN3",
 };

@@ -15,4 +15,6 @@ export default {
     msgCorrect,
     preamble,
     lmd: "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000LUE",
+    imgId: "000SWV",
+    sudokupad: "https://sudokupad.app/usquoo8ao3",
 };

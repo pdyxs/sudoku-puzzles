@@ -15,7 +15,7 @@ const {
     preamble,
     sudokupad,
     imgId
-} = puzzles[1];
+} = puzzles[5];
 
 const processedPuzzle = process(puzzle);
 
@@ -95,6 +95,8 @@ document.getElementById("generateUrl").setAttribute("href", "https://sudokupad.a
 
 if (sudokupad !== undefined) {
     document.getElementById("sudokupad-link").setAttribute("href", sudokupad);
+} else {
+    document.getElementById("sudokupad-link").innerText = "No Sudokupad Link set"
 }
 
 const otherSeriesPuzzles = puzzles.filter(p => p.lmd !== undefined && p.puzzle?.metadata?.title !== puzzle?.metadata?.title);

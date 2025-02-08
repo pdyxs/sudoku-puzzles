@@ -4,7 +4,7 @@ Contours: Red lines are contours. Each line has a "high" side and a "low" side, 
 
 Skyscraper Fog: The grid begins covered in fog. Each digit represents terrain of a height of that digit itself. Higher digits always block the line of sight of smaller digits.
 
-When a digit is placed, fog will clear at that cell, and from any cells that can be seen from that cell in one of the four orthogonal directions. Note that the height of a cell is irrelevant for determining what can be seen from it.
+When a digit is placed, fog will clear at that cell, and from any cells that can be seen from that cell in one of the four orthogonal directions. The value of the placed digit is irrelevant for determining what can be seen from that cell.
 
 Given digit: A white digit is given, but will need to be entered.
 

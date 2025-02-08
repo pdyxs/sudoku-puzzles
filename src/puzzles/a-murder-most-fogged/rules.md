@@ -1,13 +1,13 @@
 There's been a murder, and only you can solve it!
 
-Normal sudoku rules apply to the cells in the marked 3x3 boxes.
+Sudoku: Fill the marked 3x3 boxes with digits 1 to 9, so that each digit occurs exactly once in every row, every column and every 3x3 box.
 
 There are 4 types of clues in the grid, which will lead you to the victim (blood), the killer (footprints), the witness (paw prints) and the mastermind behind it all (paper trail).
 
 These clues map to the following types (there is exactly one of each):
 
 * The difference between digits is N
-* One digit is at least N larger than the other (in a consistent direction). A difference of N appears at least once in each box
+* The digit that the clue points towards is at least N larger than the other (like a thermo). A difference of N appears at least once in each box
 * The digits add to N
 * One digit is N times the other
 
