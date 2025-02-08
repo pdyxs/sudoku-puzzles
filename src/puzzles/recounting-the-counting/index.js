@@ -13,7 +13,7 @@ export default {
     rules: htmlRules + rules,
     msgCorrect: "",
     preamble,
-    lmd: "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000LMU",
+    lmd: "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000LL7",
     sudokupad: "https://sudokupad.app/tc5dhvo13g",
     imgId: "000SLQ",
 };
