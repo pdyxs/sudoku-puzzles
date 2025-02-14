@@ -6,6 +6,8 @@ Clearing Fog: Entering the correct digit in an unshaded cell will clear the fog 
 
 Some Things Wrogn: Clues that are in unshaded cells are wrogn - that is, they are not 100% correct. Cells connected to the same clue must either be all shaded or all unshaded. When the fog lifts on an unshaded cell, it may reveal new clues, which will also be wrogn.
 
+Some Things Fogn: Clues that are in shaded cells are correct. Entering the correct digit into a shaded cell will reveal no fog.
+
 Clues:
  * Kropki: Digits connected by a white dot are consecutive. When digits are connected by a black (or hollow) dot, one is double the other
  * Region Sum lines: Region boundaries separate a thick solid line into segments, each of which sum to the same number

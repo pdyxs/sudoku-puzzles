@@ -32,5 +32,5 @@ export default {
     preamble,
     imgId: "000T0R",
     lmd: "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000LXM",
-    sudokupad: "https://sudokupad.app/91fqqxa1ol",
+    sudokupad: "https://sudokupad.app/otswx1r68x",
 };

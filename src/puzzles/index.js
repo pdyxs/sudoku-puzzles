@@ -6,6 +6,7 @@ import whispersInTheMist from "./whispers-in-the-mist";
 import plansOfAMedic from "./plans-of-a-medic";
 import recountingTheCounting from "./recounting-the-counting";
 import theGridOfForkingPaths from "./the-grid-of-forking-paths";
+import recountingTheRooms from "./recounting-the-rooms";
 
 export const series = [
     {
@@ -16,7 +17,8 @@ export const series = [
             aMurderMostFogged,
             cartography,
             whispersInTheMist,
-            someThingsFogn
+            someThingsFogn,
+            recountingTheRooms
         ]
     },
     {

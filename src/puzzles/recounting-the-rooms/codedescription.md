@@ -1,0 +1,1 @@
+The circled numbered rooms clues above the grid, from left to right

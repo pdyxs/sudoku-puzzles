@@ -1,0 +1,1 @@
+*This is a direct sequel to [Recounting the counting](https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000LL7), this time adding numbered rooms into the mix!*
