@@ -9,6 +9,6 @@ Clearing Fog: Entering a correct digit in an unshaded cell will clear the fog:
 
 Unshaded Whispers: Any two orthogonally connected unshaded cells must have a difference of at least 5.
 
-Kropki: A white dot separates digits which are consecutive.
+Kropki: Digits connected by a white dot are consecutive. Not all dots are given.
 
 Given Digits: White digits are given, but have not been entered into the grid.

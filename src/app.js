@@ -15,7 +15,7 @@ const {
     preamble,
     sudokupad,
     imgId
-} = puzzles[puzzles.length - 2];
+} = puzzles[puzzles.length - 3];
 
 const processedPuzzle = process(puzzle);
 
