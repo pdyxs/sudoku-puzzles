@@ -1,0 +1,1 @@
+Sudoku: Fill the grid with the digits 1-9, so that each digit occurs exactly once in every row, every column and every 3x3 box.

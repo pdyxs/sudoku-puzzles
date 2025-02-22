@@ -1,7 +1,14 @@
 import { convert } from "html-to-text";
+import { RulesMap } from "./rules";
+
+export function replaceRules(rules) {
+    RulesMap.forEach((rule, code) => {
+        rules = rules.replaceAll(`<p>{${code}}</p>`, rule);
+    });
+    return rules;
+}
 
 export function addRules(data, RulesHtml) {
-    console.log(RulesHtml);
     data.metadata.rules = 
         convert(RulesHtml, {
             wordwrap: false,

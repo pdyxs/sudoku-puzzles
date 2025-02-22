@@ -1,0 +1,1 @@
+Kropki: Digits connected by a white dot are consecutive.

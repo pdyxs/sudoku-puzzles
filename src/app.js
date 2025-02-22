@@ -4,8 +4,9 @@ import { series } from "./puzzles";
 
 const {
     name: seriesName,
-    puzzles
-} = series[0];
+    puzzles,
+    hidePuzzleList
+} = series[series.length - 1];
 
 const {
     puzzle,
@@ -15,7 +16,7 @@ const {
     preamble,
     sudokupad,
     imgId
-} = puzzles[puzzles.length - 3];
+} = puzzles[puzzles.length - 1];
 
 const processedPuzzle = process(puzzle);
 
@@ -100,7 +101,7 @@ if (sudokupad !== undefined) {
 }
 
 const otherSeriesPuzzles = puzzles.filter(p => p.lmd !== undefined && p.puzzle?.metadata?.title !== puzzle?.metadata?.title);
-if (otherSeriesPuzzles.length > 0) {
+if (!hidePuzzleList && otherSeriesPuzzles.length > 0) {
     let postHtml = `<h4 style="margin-bottom: 0">More ${seriesName} puzzles:</h4>\n<ul style="margin-top: 0.4em">\n`;
     postHtml += otherSeriesPuzzles.map(({puzzle, lmd}) => `\t<li><a href="${lmd}">${puzzle.metadata.title}</a></li>`).join("\n");
     postHtml += "\n</ul>";
@@ -116,6 +117,6 @@ let imageHtml = "";
 if (imgId !== undefined) {
     document.getElementById("image-placeholder").innerHTML = `Image id: ${imgId}`;
     imageHtml = `<div style="clear:both;text-align:center"><img:${imgId}></div>`;
-} 
+}
 
 document.getElementById("html-pre").innerText = preHtml + imageHtml + postHtml;

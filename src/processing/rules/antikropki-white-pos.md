@@ -1,0 +1,1 @@
+Anti-Kropki: Digits connected by a white dot with a cross are not consecutive.
