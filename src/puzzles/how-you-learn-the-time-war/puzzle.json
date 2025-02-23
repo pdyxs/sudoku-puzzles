@@ -4,8 +4,7 @@
     "source": "Sudoku Maker v2024.11.16-2f52641",
     "title": "This is how you learn the time war",
     "author": "pdyxs",
-    "solution": "123654654132546321312465465213231546??????????????????",
-    "norowcol": true
+    "solution": "123654654132546321312465465213231546??????????????????"
   },
   "cages": [
     {"cells": [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0]], "value": "Blue (2)", "fontC": "#543af8ff", "outlineC": "#543af8ff"},
