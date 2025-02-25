@@ -12,8 +12,25 @@ export function addRules(data, RulesHtml) {
     data.metadata.rules = 
         convert(RulesHtml, {
             wordwrap: false,
+            formatters: {
+                markdownLinkFormatter: function(elem, walk, builder, formatOptions) {
+                    builder.addInline(formatOptions.prefix);
+                    const anchorFormatter = builder.options.formatters['anchor'];
+                    if (anchorFormatter) {
+                        anchorFormatter(elem, walk, builder, formatOptions);
+                    }
+                }
+            },
             selectors: [
-                { selector: 'strong', format: 'inlineSurround', options: {prefix: '*', suffix: '*'}}
+                { selector: 'strong', format: 'inlineSurround', options: {prefix: '*', suffix: '*'}},
+                { 
+                    selector: 'a', 
+                    format: 'markdownLinkFormatter',
+                    options: {
+                        prefix: '[',
+                        linkBrackets: ['](', ')']
+                    }
+                }
             ]
         })
         .replaceAll("\n\n *", "\n *");

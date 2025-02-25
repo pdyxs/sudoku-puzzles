@@ -39,5 +39,6 @@ export default {
 
         return data;
     },
-    rules
+    rules,
+    sudokupad: "https://sudokupad.app/dd7g5pcp3b"
 };

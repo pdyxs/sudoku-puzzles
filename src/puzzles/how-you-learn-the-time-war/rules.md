@@ -6,8 +6,10 @@ Timelines: Two Time Agents, Blue (2) and Red (5), are jumping forwards and backw
 
 Time Jumps: When jumping from one cell to the next (ie. when their age increases by 1), a Time Agent may travel as much as they like in time, but only up to 2 columns in space. For example, if Blue at age 3 is in column 2, their digit must appear in columns 1, 3 or 4 in the row where they are age 4.
 
-Controlling locations: When the first Time Agent appears in a column, they take control of the cell they land in and all cells below them. Another Time Agent appearing later (ie. further down) in the column will take control, starting at the time that they arrive, if and only if they are older than the original Time Agent. For example: in a column that reads 142356, where Blue (2) has age 3 and Red (5) has age 4, the 2 and 3 would be Blue and the 5 and 6 would be Red.
+Controlling cells: When the first Time Agent appears in a column, they take control of the cell they land in and all cells below them. Another Time Agent appearing later (ie. further down) in the column will take control, starting at the time that they arrive, if and only if they are older than the original Time Agent. For example: in a column that reads 142356, where Blue (2) has age 3 and Red (5) has age 4, the 2 and 3 would be Blue and the 5 and 6 would be Red.
 
 Winning locations: For each column, take the sum of the cells controlled by each Time Agent - the Time Agent with the highest sum wins the location. Clues below the grid denote the winning sum (or the tied sum, in a tie).
 
 Losing the Time War: The Time Agent who wins the most locations wins the war. No-one can win the war.
+
+[Example (4x4) puzzle](sample-url), [Solution](solution-url)

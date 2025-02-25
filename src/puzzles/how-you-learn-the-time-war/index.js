@@ -5,8 +5,13 @@ import puzzle from "./puzzle.json";
 import { addMsgCorrect, addRules, replaceRules } from "../../processing/messages";
 import { generateRowCols } from "../../processing/rowcol";
 import { hideGridOutside } from "../../processing/hide-grid";
+import howTheTimeWarWorksUnsolved from "../how-the-time-war-works-unsolved";
+import howTheTimeWarWorksSolved from "../how-the-time-war-works-solved";
 
-const rules = replaceRules(rawRules);
+const rules = replaceRules(
+    rawRules.replace('href="sample-url"', `href="${howTheTimeWarWorksUnsolved.sudokupad}"`)
+            .replace('href="solution-url"', `href="${howTheTimeWarWorksSolved.sudokupad}"`)
+);
 
 export default {
     puzzle,

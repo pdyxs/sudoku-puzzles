@@ -3,7 +3,7 @@ import puzzle from "./puzzle.json";
 import { addRules, replaceRules } from "../../processing/messages";
 import { generateRowCols } from "../../processing/rowcol";
 import { hideGridOutside } from "../../processing/hide-grid";
-import { ignoreSolutionOutside } from "../../processing/ignore_solution";
+import { ignoreSolutionOutside } from "../../processing/ignore-solution";
 
 const rules = replaceRules(rawRules);
 
@@ -41,5 +41,6 @@ export default {
 
         return data;
     },
+    sudokupad: "https://sudokupad.app/x7lkyuq37a",
     rules
 };

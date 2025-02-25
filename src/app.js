@@ -16,7 +16,7 @@ const {
     preamble,
     sudokupad,
     imgId
-} = puzzles[puzzles.length - 2];
+} = puzzles[puzzles.length - 4];
 
 const processedPuzzle = process(puzzle);
 
@@ -90,8 +90,12 @@ function encodeSCLPuz(puzzle) {
 //Overview
 document.getElementById("puzzle-title").innerHTML = processedPuzzle.metadata.title;
 document.getElementById("puzzle-rules").innerHTML = rules;
-document.getElementById("puzzle-preamble").innerHTML = preamble;
-document.getElementById("puzzle-msgcorrect").innerHTML = msgCorrect;
+if (preamble !== undefined) {
+    document.getElementById("puzzle-preamble").innerHTML = preamble;
+}
+if (msgCorrect !== undefined) {
+    document.getElementById("puzzle-msgcorrect").innerHTML = msgCorrect;
+}
 document.getElementById("generateUrl").setAttribute("href", "https://sudokupad.app/" + encodeSCLPuz(processedPuzzle))
 
 if (sudokupad !== undefined) {

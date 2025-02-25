@@ -80,7 +80,7 @@
       "center": [0.5, 0.5],
       "width": 1,
       "height": 1,
-      "backgroundColor": "#a0a0a0ff"
+      "backgroundColor": "#c0c0c0ff"
     },
     {
       "center": [0.5, 1.5],
@@ -98,7 +98,7 @@
       "center": [0.5, 3.5],
       "width": 1,
       "height": 1,
-      "backgroundColor": "#a0a0a0ff"
+      "backgroundColor": "#c0c0c0ff"
     },
     {
       "center": [1.5, 0.5],
@@ -122,7 +122,7 @@
       "center": [1.5, 3.5],
       "width": 1,
       "height": 1,
-      "backgroundColor": "#a0a0a0ff"
+      "backgroundColor": "#c0c0c0ff"
     },
     {
       "center": [2.5, 0.5],
