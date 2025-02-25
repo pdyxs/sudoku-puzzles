@@ -1,5 +1,5 @@
 import { convert } from "html-to-text";
-import { RulesMap } from "./rules";
+import { RulesMap } from "../rules";
 
 export function replaceRules(rules) {
     RulesMap.forEach((rule, code) => {
