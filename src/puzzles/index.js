@@ -9,6 +9,8 @@ import theGridOfForkingPaths from "./the-grid-of-forking-paths";
 import recountingTheRooms from "./recounting-the-rooms";
 import howYouSolveTheTimeWar from "./how-you-solve-the-time-war";
 import howYouLearnTheTimeWar from './how-you-learn-the-time-war';
+import howTheTimeWarWorksUnsolved from "./how-the-time-war-works-unsolved";
+import howTheTimeWarWorksSolved from "./how-the-time-war-works-solved";
 
 export const series = [
     {
@@ -35,7 +37,9 @@ export const series = [
         puzzles: [
             plansOfAMedic,
             howYouLearnTheTimeWar,
-            howYouSolveTheTimeWar
+            howYouSolveTheTimeWar,
+            howTheTimeWarWorksUnsolved,
+            howTheTimeWarWorksSolved
         ]
     }
 ];

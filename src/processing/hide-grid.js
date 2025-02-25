@@ -31,7 +31,7 @@ export function hideGridOutside(data, [startRow, endRow], [startCol, endCol]) {
                 })
             }
 
-            if (startCol < gridWidth + 1) {
+            if (endCol + 1 < gridWidth) {
                 data.lines.push({
                     wayPoints: [[r, endCol + 1 + PADDING], [r, gridWidth]],
                     color: "#FFFFFF",
@@ -64,7 +64,7 @@ export function hideGridOutside(data, [startRow, endRow], [startCol, endCol]) {
                 })
             }
 
-            if (endRow < gridHeight + 1) {
+            if (endRow + 1 < gridHeight) {
                 data.lines.push({
                     wayPoints: [[endRow + 1 + PADDING, c], [gridHeight, c]],
                     color: "#FFFFFF",
