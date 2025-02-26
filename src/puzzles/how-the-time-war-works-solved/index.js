@@ -1,10 +1,11 @@
-import rawRules from "../how-the-time-war-works-unsolved/rules.md";
+import * as rawRules from "../how-the-time-war-works-unsolved/rules.md";
 import puzzle from "./puzzle.json";
 import { addRules, replaceRules } from "../../processing/messages";
 import { generateRowCols } from "../../processing/rowcol";
 import { hideGridOutside } from "../../processing/hide-grid";
 
-const rules = replaceRules(rawRules);
+replaceRules(rawRules);
+const rules = rawRules.default;
 
 export default {
     puzzle,
@@ -40,5 +41,6 @@ export default {
         return data;
     },
     rules,
+    imgId: "000TBU",
     sudokupad: "https://sudokupad.app/dd7g5pcp3b"
 };

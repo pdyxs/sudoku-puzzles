@@ -11,5 +11,3 @@ Controlling cells: When the first Time Agent appears in a column, they take cont
 Winning locations: For each column, take the sum of the cells controlled by each Time Agent - the Time Agent with the highest sum wins the location. Clues below the grid denote the winning sum (or the tied sum, in a tie).
 
 Losing the Time War: The Time Agent who wins the most locations wins the war. No-one can win the war.
-
-[Example (4x4) puzzle](sample-url), [Solution](solution-url)

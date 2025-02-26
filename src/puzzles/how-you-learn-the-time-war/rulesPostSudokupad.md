@@ -1,0 +1,1 @@
+Here's an [example (4x4) puzzle](sample-url) and it's [solution](solution-url)

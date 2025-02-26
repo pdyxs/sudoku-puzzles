@@ -1,22 +1,59 @@
-import rawRules from "./rules.md";
-import msgCorrect from "./msgcorrect.md";
-import preamble from "./preamble.md";
+import * as allTexts from "./*.md";
 import puzzle from "./puzzle.json";
-import { addMsgCorrect, addRules, replaceRules } from "../../processing/messages";
+import { addMsgCorrect, addRules, createMarkdown, replaceImages, replaceRules, replaceUrls } from "../../processing/messages";
 import { generateRowCols } from "../../processing/rowcol";
 import { hideGridOutside } from "../../processing/hide-grid";
 import howTheTimeWarWorksUnsolved from "../how-the-time-war-works-unsolved";
 import howTheTimeWarWorksSolved from "../how-the-time-war-works-solved";
 
-const rules = replaceRules(
-    rawRules.replace('href="sample-url"', `href="${howTheTimeWarWorksUnsolved.sudokupad}"`)
-            .replace('href="solution-url"', `href="${howTheTimeWarWorksSolved.sudokupad}"`)
+const texts = Object.entries(allTexts).reduce((o, [name, text]) => {
+    return {
+        ...o,
+        [name]: {
+            default: text.default,
+            raw: text.raw
+        }
+    }
+}, {});
+
+const urls = [
+    ["sample-url", howTheTimeWarWorksUnsolved.sudokupad],
+    ["solution-url", howTheTimeWarWorksSolved.sudokupad]
+];
+
+replaceUrls(texts.rulesPostSudokupad, urls);
+replaceUrls(texts.rulesPostHtml, urls);
+
+replaceImages(texts.rulesPostHtml, [
+    ["unsolved", howTheTimeWarWorksUnsolved.imgId],
+    ["solved", howTheTimeWarWorksSolved.imgId]
+])
+
+texts.rulesPostHtml.default = texts.rulesPostHtml.default.replaceAll(
+    "<table",
+    '<table style="max-width: 500px"'
 );
+
+replaceRules(texts.rules);
+const rules = texts.rules.default;
+const msgCorrect = texts.msgcorrect.default;
+const preamble = texts.preamble.default;
+
+const sudokupad = "https://sudokupad.app/54qexpubot";
+const lmd = "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000M6F";
+
+const markdown = createMarkdown(
+    puzzle.metadata.title, 
+    texts.preamble.raw, 
+    texts.rules.raw,
+    sudokupad,
+    lmd
+)
 
 export default {
     puzzle,
     process: (data) => {
-        addRules(data, rules);
+        addRules(data, rules + texts.rulesPostSudokupad.default);
         addMsgCorrect(data, msgCorrect);
         hideGridOutside(data, [0,5], [0,5]);
         generateRowCols(data, [0,5], [0,5]);
@@ -47,7 +84,11 @@ export default {
 
         return data;
     },
-    rules,
+    rules: rules + texts.rulesPostHtml.default,
     msgCorrect,
     preamble,
+    imgId: "000TBV",
+    sudokupad,
+    markdown,
+    lmd
 };

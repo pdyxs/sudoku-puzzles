@@ -1,11 +1,30 @@
 import { convert } from "html-to-text";
-import { RulesMap } from "../rules";
+import { HtmlRules, MarkdownRules } from "../rules";
 
-export function replaceRules(rules) {
-    RulesMap.forEach((rule, code) => {
-        rules = rules.replaceAll(`<p>{${code}}</p>`, rule);
+export function replaceUrls(text, urls) {
+    urls.forEach(([name, url]) => {
+        text.default = text.default.replace(`href="${name}"`, `href="${url}"`);
+        text.raw = text.raw.replace(`](${name})`, `](${url})`);
     });
-    return rules;
+}
+
+export function replaceImages(text, images) {
+    images.forEach(([name, code]) => {
+        text.default = text.default.replace(`img:${name}`, `||img:${code}||`)
+    })
+}
+
+export function replaceRules(text) {
+    HtmlRules.forEach((rule, code) => {
+        text.default = text.default.replaceAll(`<p>{${code}}</p>`, rule);
+    });
+    MarkdownRules.forEach((rule, code) => {
+        text.raw = text.raw.replaceAll(`{${code}}`, rule);
+    });
+}
+
+export function createMarkdown(name, preambeMd, rulesMd, sudokupad, lmd) {
+    return `**${name}**\n\n${preambeMd}\n\n**Rules**\n\n${rulesMd}\n\n**Play**\n\nLMD: ${lmd}\nSudokupad: ${sudokupad}`;
 }
 
 export function addRules(data, RulesHtml) {

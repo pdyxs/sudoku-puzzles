@@ -1,6 +1,6 @@
 {sudoku}
 
-{akropkiw+}
+{antikropki-white-pos}
 
 Space-Time: Each row of the grid represents a slice of time, with the top row as the earliest and the bottom row as the latest. Each column of the grid represents a different location in space.
 

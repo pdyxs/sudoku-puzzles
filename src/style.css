@@ -3,6 +3,10 @@
     --header-height: 40px;
 }
 
+.hide {
+    display: none;
+}
+
 .menu-bar {
     display: flex;
     background-color: #f1f1f1;

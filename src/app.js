@@ -15,7 +15,8 @@ const {
     msgCorrect,
     preamble,
     sudokupad,
-    imgId
+    imgId,
+    markdown
 } = puzzles[puzzles.length - 4];
 
 const processedPuzzle = process(puzzle);
@@ -123,4 +124,13 @@ if (imgId !== undefined) {
     imageHtml = `<div style="clear:both;text-align:center"><img:${imgId}></div>`;
 }
 
-document.getElementById("html-pre").innerText = preHtml + imageHtml + postHtml;
+const shownHtml = (preHtml + imageHtml + postHtml).replaceAll("||img:", "<img:").replaceAll("||", ">");
+document.getElementById("html-pre").innerText = shownHtml;
+
+//Markdown
+if (markdown) {
+    document.getElementById("markdown-btn").classList.remove("hide");
+    document.getElementById("md-pre").innerHTML = markdown;
+} else {
+    document.getElementById("markdown-btn").classList.add("hide");
+}

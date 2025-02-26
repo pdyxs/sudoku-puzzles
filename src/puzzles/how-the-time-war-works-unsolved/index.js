@@ -1,11 +1,12 @@
-import rawRules from "./rules.md";
+import * as rawRules from "./rules.md";
 import puzzle from "./puzzle.json";
 import { addRules, replaceRules } from "../../processing/messages";
 import { generateRowCols } from "../../processing/rowcol";
 import { hideGridOutside } from "../../processing/hide-grid";
 import { ignoreSolutionOutside } from "../../processing/ignore-solution";
 
-const rules = replaceRules(rawRules);
+replaceRules(rawRules);
+const rules = rawRules.default;
 
 export default {
     puzzle,
@@ -41,6 +42,7 @@ export default {
 
         return data;
     },
+    imgId: "000TBT",
     sudokupad: "https://sudokupad.app/x7lkyuq37a",
     rules
 };

@@ -1,11 +1,12 @@
-import rawRules from "./rules.md";
-import msgCorrect from "./msgcorrect.md";
-import preamble from "./preamble.md";
+import * as texts from "./*.md";
 import puzzle from "./puzzle.json";
 import { addMsgCorrect, addRules, replaceRules } from "../../processing/messages";
 import { generateRowCols } from "../../processing/rowcol";
 
-const rules = replaceRules(rawRules);
+replaceRules(texts.rules);
+const rules = texts.rules.default;
+const msgCorrect = texts.msgcorrect.default;
+const preamble = texts.preamble.default;
 
 export default {
     puzzle,

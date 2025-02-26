@@ -1,0 +1,1 @@
+The squares that Blue controls in rows 3 and 4 (row 3, then row 4)
