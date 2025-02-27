@@ -34,6 +34,11 @@ texts.rulesPostHtml.default = texts.rulesPostHtml.default.replaceAll(
     '<table style="max-width: 500px"'
 );
 
+export const rulesPosts = {
+    sudokupad: texts.rulesPostSudokupad,
+    html: texts.rulesPostHtml
+};
+
 replaceRules(texts.rules);
 const rules = texts.rules.default;
 const msgCorrect = texts.msgcorrect.default;
