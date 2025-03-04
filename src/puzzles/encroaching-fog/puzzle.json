@@ -1,0 +1,1514 @@
+{
+  "id": "sxsm_pdyxs_5edee263ce8348822a9077079358c011",
+  "metadata": {
+    "source": "Sudoku Maker v2025.02.24-ccf5a86",
+    "title": "Encroaching fog",
+    "author": "pdyxs",
+    "solution": "351724968786359412429168573695487321132695784847231659513846297268973145974512836"
+  },
+  "foglight": [],
+  "triggereffect": [
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c4"
+      },
+      "effect": {"type": "foglight", "cells": "r3c4"}
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r1c1"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r1c1r1c2r2c1r2c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r1c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r1c2r1c1r1c3r2c2r2c1r2c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r1c3"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r1c3r1c2r1c4r2c3r2c2r2c4"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r1c4"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r1c4r1c3r1c5r2c4r2c3r2c5"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r1c5"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r1c5r1c4r1c6r2c5r2c4r2c6"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r1c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r1c6r1c5r1c7r2c6r2c5r2c7"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r1c7"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r1c7r1c6r1c8r2c7r2c6r2c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r1c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r1c8r1c7r1c9r2c8r2c7r2c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r1c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r1c9r1c8r2c9r2c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c1"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c1r1c1r2c2r3c1r1c2r3c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c2r2c1r1c2r2c3r3c2r1c1r1c3r3c1r3c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c3"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c3r2c2r1c3r2c4r3c3r1c2r1c4r3c2r3c4"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c4"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c4r2c3r1c4r2c5r3c4r1c3r1c5r3c3r3c5"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c5"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c5r2c4r1c5r2c6r3c5r1c4r1c6r3c4r3c6"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c6r2c5r1c6r2c7r3c6r1c5r1c7r3c5r3c7"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c7"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c7r2c6r1c7r2c8r3c7r1c6r1c8r3c6r3c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c8r2c7r1c8r2c9r3c8r1c7r1c9r3c7r3c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r2c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r2c9r2c8r1c9r3c9r1c8r3c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c1"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r3c1r2c1r3c2r4c1r2c2r4c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r3c2r3c1r2c2r3c3r4c2r2c1r2c3r4c1r4c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c3"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r3c3r3c2r2c3r3c4r4c3r2c2r2c4r4c2r4c4"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c4"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r3c4r3c3r2c4r3c5r4c4r2c3r2c5r4c3r4c5"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c5"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r3c5r3c4r2c5r3c6r4c5r2c4r2c6r4c4r4c6"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r3c6r3c5r2c6r3c7r4c6r2c5r2c7r4c5r4c7"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c7"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r3c7r3c6r2c7r3c8r4c7r2c6r2c8r4c6r4c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r3c8r3c7r2c8r3c9r4c8r2c7r2c9r4c7r4c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r3c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r3c9r3c8r2c9r4c9r2c8r4c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r4c1"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r4c1r3c1r4c2r5c1r3c2r5c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r4c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r4c2r4c1r3c2r4c3r5c2r3c1r3c3r5c1r5c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r4c3"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r4c3r4c2r3c3r4c4r5c3r3c2r3c4r5c2r5c4"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r4c4"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r4c4r4c3r3c4r4c5r5c4r3c3r3c5r5c3r5c5"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r4c5"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r4c5r4c4r3c5r4c6r5c5r3c4r3c6r5c4r5c6"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r4c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r4c6r4c5r3c6r4c7r5c6r3c5r3c7r5c5r5c7"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r4c7"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r4c7r4c6r3c7r4c8r5c7r3c6r3c8r5c6r5c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r4c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r4c8r4c7r3c8r4c9r5c8r3c7r3c9r5c7r5c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r4c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r4c9r4c8r3c9r5c9r3c8r5c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r5c1"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r5c1r4c1r5c2r6c1r4c2r6c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r5c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r5c2r5c1r4c2r5c3r6c2r4c1r4c3r6c1r6c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r5c3"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r5c3r5c2r4c3r5c4r6c3r4c2r4c4r6c2r6c4"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r5c4"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r5c4r5c3r4c4r5c5r6c4r4c3r4c5r6c3r6c5"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r5c5"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r5c5r5c4r4c5r5c6r6c5r4c4r4c6r6c4r6c6"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r5c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r5c6r5c5r4c6r5c7r6c6r4c5r4c7r6c5r6c7"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r5c7"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r5c7r5c6r4c7r5c8r6c7r4c6r4c8r6c6r6c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r5c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r5c8r5c7r4c8r5c9r6c8r4c7r4c9r6c7r6c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r5c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r5c9r5c8r4c9r6c9r4c8r6c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c1"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c1r5c1r6c2r7c1r5c2r7c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c2r6c1r5c2r6c3r7c2r5c1r5c3r7c1r7c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c3"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c3r6c2r5c3r6c4r7c3r5c2r5c4r7c2r7c4"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c4"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c4r6c3r5c4r6c5r7c4r5c3r5c5r7c3r7c5"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c5"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c5r6c4r5c5r6c6r7c5r5c4r5c6r7c4r7c6"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c6r6c5r5c6r6c7r7c6r5c5r5c7r7c5r7c7"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c7"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c7r6c6r5c7r6c8r7c7r5c6r5c8r7c6r7c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c8r6c7r5c8r6c9r7c8r5c7r5c9r7c7r7c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r6c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r6c9r6c8r5c9r7c9r5c8r7c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r7c1"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r7c1r6c1r7c2r8c1r6c2r8c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r7c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r7c2r7c1r6c2r7c3r8c2r6c1r6c3r8c1r8c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r7c3"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r7c3r7c2r6c3r7c4r8c3r6c2r6c4r8c2r8c4"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r7c4"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r7c4r7c3r6c4r7c5r8c4r6c3r6c5r8c3r8c5"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r7c5"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r7c5r7c4r6c5r7c6r8c5r6c4r6c6r8c4r8c6"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r7c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r7c6r7c5r6c6r7c7r8c6r6c5r6c7r8c5r8c7"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r7c7"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r7c7r7c6r6c7r7c8r8c7r6c6r6c8r8c6r8c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r7c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r7c8r7c7r6c8r7c9r8c8r6c7r6c9r8c7r8c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r7c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r7c9r7c8r6c9r8c9r6c8r8c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c1"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c1r7c1r8c2r9c1r7c2r9c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c2r8c1r7c2r8c3r9c2r7c1r7c3r9c1r9c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c3"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c3r8c2r7c3r8c4r9c3r7c2r7c4r9c2r9c4"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c4"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c4r8c3r7c4r8c5r9c4r7c3r7c5r9c3r9c5"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c5"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c5r8c4r7c5r8c6r9c5r7c4r7c6r9c4r9c6"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c6r8c5r7c6r8c7r9c6r7c5r7c7r9c5r9c7"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c7"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c7r8c6r7c7r8c8r9c7r7c6r7c8r9c6r9c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c8r8c7r7c8r8c9r9c8r7c7r7c9r9c7r9c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r8c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r8c9r8c8r7c9r9c9r7c8r9c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r9c1"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r9c1r8c1r9c2r8c2"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r9c2"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r9c2r9c1r8c2r9c3r8c1r8c3"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r9c3"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r9c3r9c2r8c3r9c4r8c2r8c4"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r9c4"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r9c4r9c3r8c4r9c5r8c3r8c5"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r9c5"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r9c5r9c4r8c5r9c6r8c4r8c6"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r9c6"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r9c6r9c5r8c6r9c7r8c5r8c7"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r9c7"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r9c7r9c6r8c7r9c8r8c6r8c8"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r9c8"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r9c8r9c7r8c8r9c9r8c7r8c9"
+      }
+    },
+    {
+      "trigger": {
+        "type": "cellvalue",
+        "cell": "r9c9"
+      },
+      "effect": {
+        "type": "foglight",
+        "cells": "r9c9r9c8r8c9r8c8"
+      }
+    }
+  ],
+  "cages": [],
+  "cells": [
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}]
+  ],
+  "regions": [
+    [
+      [0, 0],
+      [0, 1],
+      [0, 2],
+      [1, 0],
+      [1, 1],
+      [1, 2],
+      [2, 0],
+      [2, 1],
+      [2, 2]
+    ],
+    [
+      [0, 3],
+      [0, 4],
+      [0, 5],
+      [1, 3],
+      [1, 4],
+      [1, 5],
+      [2, 3],
+      [2, 4],
+      [2, 5]
+    ],
+    [
+      [0, 6],
+      [0, 7],
+      [0, 8],
+      [1, 6],
+      [1, 7],
+      [1, 8],
+      [2, 6],
+      [2, 7],
+      [2, 8]
+    ],
+    [
+      [3, 0],
+      [3, 1],
+      [3, 2],
+      [4, 0],
+      [4, 1],
+      [4, 2],
+      [5, 0],
+      [5, 1],
+      [5, 2]
+    ],
+    [
+      [3, 3],
+      [3, 4],
+      [3, 5],
+      [4, 3],
+      [4, 4],
+      [4, 5],
+      [5, 3],
+      [5, 4],
+      [5, 5]
+    ],
+    [
+      [3, 6],
+      [3, 7],
+      [3, 8],
+      [4, 6],
+      [4, 7],
+      [4, 8],
+      [5, 6],
+      [5, 7],
+      [5, 8]
+    ],
+    [
+      [6, 0],
+      [6, 1],
+      [6, 2],
+      [7, 0],
+      [7, 1],
+      [7, 2],
+      [8, 0],
+      [8, 1],
+      [8, 2]
+    ],
+    [
+      [6, 3],
+      [6, 4],
+      [6, 5],
+      [7, 3],
+      [7, 4],
+      [7, 5],
+      [8, 3],
+      [8, 4],
+      [8, 5]
+    ],
+    [
+      [6, 6],
+      [6, 7],
+      [6, 8],
+      [7, 6],
+      [7, 7],
+      [7, 8],
+      [8, 6],
+      [8, 7],
+      [8, 8]
+    ]
+  ],
+  "overlays": [
+    {
+      "center": [1.5, 1],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [4, 4.5],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [3.5, 5],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [5, 6.5],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [5.5, 7],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [4.5, 7],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [2, 6.5],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [8, 5.5],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [2, 8.5],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [3.5, 8],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [8, 8.5],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [8, 7.5],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [5, 1.5],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [8, 1.5],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [2, 4.5],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [2, 5.5],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [7, 3.5],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [7, 6.5],
+      "width": 0.34,
+      "height": 0.34,
+      "thickness": 1.28,
+      "text": "",
+      "color": "#000000",
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    }
+  ],
+  "underlays": [
+    {
+      "center": [4.5, 4.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [3.5, 3.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [3.5, 4.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [3.5, 5.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [5.5, 5.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [5.5, 4.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [5.5, 3.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [3.5, 1.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [5.5, 1.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [2.5, 0.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [1.5, 0.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [1.5, 1.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [2.5, 1.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [0.5, 4.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [0.5, 3.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [0.5, 5.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [2.5, 6.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [2.5, 7.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [2.5, 8.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [6.5, 7.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [7.5, 7.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [6.5, 8.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [8.5, 5.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [8.5, 4.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [8.5, 3.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [2.5, 2.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [7.5, 8.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [6.5, 1.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [7.5, 1.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [8.5, 1.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [7.5, 2.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [5.5, 6.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [3.5, 6.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [1.5, 6.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [8.5, 8.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [0.5, 0.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    },
+    {
+      "center": [0.5, 1.5],
+      "width": 0.82,
+      "height": 0.82,
+      "thickness": 1.28,
+      "angle": 0,
+      "rounded": true,
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#000000"
+    }
+  ]
+}

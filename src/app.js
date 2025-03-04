@@ -6,7 +6,7 @@ const {
     name: seriesName,
     puzzles,
     hidePuzzleList
-} = series[series.length - 1];
+} = series[0];
 
 const {
     puzzle,
@@ -17,7 +17,7 @@ const {
     sudokupad,
     imgId,
     markdown
-} = puzzles[puzzles.length - 3];
+} = puzzles[puzzles.length - 1];
 
 const processedPuzzle = process(puzzle);
 
