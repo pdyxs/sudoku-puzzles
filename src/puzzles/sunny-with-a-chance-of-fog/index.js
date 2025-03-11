@@ -1,6 +1,6 @@
 import * as allTexts from "./*.md";
 import puzzle from "./puzzle.json";
-import { addMsgCorrect, addRules, replaceRules } from "../../processing/messages";
+import { addMsgCorrect, addRules, createMarkdown, replaceRules } from "../../processing/messages";
 
 const texts = Object.entries(allTexts).reduce((o, [name, text]) => {
     return {
@@ -16,6 +16,12 @@ replaceRules(texts.rules);
 const rules = texts.rules.default;
 const msgCorrect = texts.msgcorrect.default;
 const preamble = texts.preamble.default;
+
+const markdown = createMarkdown(
+    puzzle.metadata.title, 
+    texts.preamble.raw, 
+    texts.rules.raw,
+)
 
 export default {
     puzzle,
@@ -87,10 +93,10 @@ export default {
             if (Number.isInteger(r)) {
                 data.lines.push({
                     wayPoints: [
-                        [r-p,c-0.5+p],
-                        [r-p,c+0.5-p],
-                        [r+p,c+0.5-p],
-                        [r+p,c-0.5+p]
+                        [r-p*2,c-0.5+p],
+                        [r-p*2,c+0.5-p],
+                        [r+p*2,c+0.5-p],
+                        [r+p*2,c-0.5+p]
                     ],
                     color: "#ffffff00",
                     fill: fogColor,
@@ -100,10 +106,10 @@ export default {
             } else {
                 data.lines.push({
                     wayPoints: [
-                        [r-0.5+p,c-p],
-                        [r-0.5+p,c+p],
-                        [r+0.5-p,c+p],
-                        [r+0.5-p,c-p]
+                        [r-0.5+p,c-p*2],
+                        [r-0.5+p,c+p*2],
+                        [r+0.5-p,c+p*2],
+                        [r+0.5-p,c-p*2]
                     ],
                     color: "#ffffff00",
                     fill: fogColor,
@@ -117,5 +123,6 @@ export default {
     },
     rules,
     msgCorrect,
-    preamble
+    preamble,
+    markdown
 };

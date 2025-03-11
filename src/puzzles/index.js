@@ -11,7 +11,7 @@ import howYouLiveTheTimeWar from "./how-you-live-the-time-war";
 import howYouLearnTheTimeWar from './how-you-learn-the-time-war';
 import howTheTimeWarWorksUnsolved from "./how-the-time-war-works-unsolved";
 import howTheTimeWarWorksSolved from "./how-the-time-war-works-solved";
-import encroachingFog from "./encroaching-fog";
+import sunnyWithAChanceOfFog from "./sunny-with-a-chance-of-fog";
 
 export const series = [
     {
@@ -24,7 +24,7 @@ export const series = [
             whispersInTheMist,
             someThingsFogn,
             recountingTheRooms,
-            encroachingFog
+            sunnyWithAChanceOfFog
         ]
     },
     {
