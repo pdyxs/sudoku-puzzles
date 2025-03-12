@@ -113,7 +113,7 @@ function loadPuzzle() {
     processedPuzzle = currentPuzzleObj.process(currentPuzzleObj.puzzle);
 
     // Update all UI components
-    updatePuzzleUI(currentSeries, currentPuzzleObj);
+    updatePuzzleUI();
 
     // Initialize dropdowns
     populateSeriesDropdown();
@@ -130,12 +130,12 @@ function loadPuzzle() {
 }
 
 //Initialise puzzle
-function updatePuzzleUI(currentSeries, currentPuzzle) {
+function updatePuzzleUI() {
 
     const {
         name: seriesName,
         hidePuzzleList
-    } = currentSeries;
+    } = series[currentSeriesIndex];
 
     const {
         puzzle,
@@ -145,7 +145,7 @@ function updatePuzzleUI(currentSeries, currentPuzzle) {
         sudokupad,
         imgId,
         markdown,
-    } = currentPuzzle;
+    } = series[currentSeriesIndex].puzzles[currentPuzzleIndex];
 
     //Overview
     document.getElementById("puzzle-title").innerHTML = processedPuzzle.metadata.title;
@@ -156,9 +156,9 @@ function updatePuzzleUI(currentSeries, currentPuzzle) {
     if (msgCorrect !== undefined) {
         document.getElementById("puzzle-msgcorrect").innerHTML = msgCorrect;
     }
-    document.getElementById("generateUrl").setAttribute("href", "https://sudokupad.app/" + encodeSCLPuz(processedPuzzle))
 
     if (sudokupad !== undefined) {
+        document.getElementById("sudokupad-link").innerText = "Play in Sudokupad"
         document.getElementById("sudokupad-link").setAttribute("href", sudokupad);
     } else {
         document.getElementById("sudokupad-link").innerText = "No Sudokupad Link set"
@@ -196,6 +196,63 @@ function updatePuzzleUI(currentSeries, currentPuzzle) {
 }
 
 window.addEventListener('popstate', initializeFromUrl);
+
+// Generate short link functionality
+async function generateSudokupadLink() {
+    const generateButton = document.getElementById("generateLinkBtn");
+
+    try {
+        // Set button to loading state
+        const originalText = generateButton.textContent;
+        generateButton.textContent = "Generating...";
+        generateButton.disabled = true;
+
+        // Make the POST request
+        const response = await fetch('https://sudokupad.app/admin/createlink', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ puzzle: encodeSCLPuz(processedPuzzle) })
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        if (!data.shortid) {
+            throw new Error('No shortid in response');
+        }
+
+        // Generate the URL
+        const sudokupadUrl = `https://sudokupad.app/${data.shortid}`;
+
+        // Update the current puzzle object
+        const currentSeries = series[currentSeriesIndex];
+        const currentPuzzleObj = currentSeries.puzzles[currentPuzzleIndex];
+        currentPuzzleObj.sudokupad = sudokupadUrl;
+
+        updatePuzzleUI();
+
+        generateButton.textContent = `Puzzle id: ${data.shortid}`;
+        // Copy URL to clipboard
+        copyTextToClipboard(sudokupadUrl, generateButton);
+
+        return sudokupadUrl;
+    } catch (error) {
+        console.error('Error generating link:', error);
+        generateButton.textContent = "Error";
+        setTimeout(() => {
+            generateButton.textContent = "Generate & Copy Link";
+            generateButton.disabled = false;
+        }, 2000);
+    }
+}
+
+//Generate link button
+document.getElementById("generateLinkBtn").addEventListener("click", generateSudokupadLink);
 
 // Event listeners for dropdowns
 document.getElementById('series-dropdown').addEventListener('change', function () {

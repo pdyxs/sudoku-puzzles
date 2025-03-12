@@ -160,6 +160,29 @@ pre {
     background-color: #2196F3;
 }
 
+/* Generate Link Button */
+.generate-link-btn {
+    padding: 8px 15px;
+    margin: 10px 0;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.generate-link-btn:hover {
+    background-color: #0b7dda;
+}
+
+.generate-link-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
 /* Layout adjustments */
 .copyable-container {
     display: flex;
