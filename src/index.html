@@ -1,60 +1,71 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sudoku Tester</title>
-    <script type="module" src="app.js"></script>
-    <script src="../node_modules/eruda/eruda.js"></script>
-    <script>eruda.init();</script>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="overview">
-    <iframe id="frame"></iframe>
 
-    <div class="menu-bar">
-      <button class="menu-button" data-target="overview">Overview</button>
-      <button class="menu-button" data-target="preview">Preview</button>
-      <button class="menu-button" data-target="html">HTML</button>
-      <button id="markdown-btn" class="menu-button" data-target="md">Markdown</button>
-      <div class="dropdown-container">
-        <select id="series-dropdown" class="dropdown">
-          <!-- Will be populated dynamically -->
-        </select>
-        <select id="puzzle-dropdown" class="dropdown">
-          <!-- Will be populated dynamically -->
-        </select>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudoku Tester</title>
+  <script type="module" src="app.js"></script>
+  <script src="../node_modules/eruda/eruda.js"></script>
+  <script>eruda.init();</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="overview">
+  <iframe id="frame"></iframe>
+
+  <div class="menu-bar">
+    <button class="menu-button" data-target="overview">Overview</button>
+    <button class="menu-button" data-target="preview">Preview</button>
+    <button class="menu-button" data-target="html">HTML</button>
+    <button id="markdown-btn" class="menu-button" data-target="md">Markdown</button>
+    <div class="dropdown-container">
+      <select id="series-dropdown" class="dropdown">
+        <!-- Will be populated dynamically -->
+      </select>
+      <select id="puzzle-dropdown" class="dropdown">
+        <!-- Will be populated dynamically -->
+      </select>
+    </div>
+  </div>
+
+  <div id="overview" class="content-section">
+    <h2 id="puzzle-title"></h2>
+    <a target="_blank" id="generateUrl">Generate url</a>
+    <div id="html-pre-image">
+      <div id="puzzle-preamble"></div>
+      <div>
+        <h3>Rules</h3>
+      </div>
+      <div id="puzzle-rules"></div>
+    </div>
+    <h4 id="image-placeholder">No image specified</h4>
+    <div id="html-post-image">
+      <div>
+        <p style="margin: 2em;text-align:center"><a id="sudokupad-link"
+            style=" border-radius: 1em; padding: 1em; border: 1px solid black; " href="">Play in SudokuPad</a></p>
+      </div>
+      <div id="post">
       </div>
     </div>
+    <h3>Solution</h3>
+    <div id="puzzle-msgcorrect"></div>
+  </div>
 
-    <div id="overview" class="content-section">
-      <h2 id="puzzle-title"></h2>
-      <a target="_blank" id="generateUrl">Generate url</a>
-      <div id="html-pre-image">
-        <div id="puzzle-preamble"></div>
-        <div><h3>Rules</h3>
-        </div>
-        <div id="puzzle-rules"></div>
-      </div>
-      <h4 id="image-placeholder">No image specified</h4>
-      <div id="html-post-image">
-        <div>
-          <p style="margin: 2em;text-align:center"><a id="sudokupad-link" style=" border-radius: 1em; padding: 1em; border: 1px solid black; " href="">Play in SudokuPad</a></p>
-        </div>
-        <div id="post">
-        </div>
-      </div>
-      <h3>Solution</h3>
-      <div id="puzzle-msgcorrect"></div>
-    </div>
-
-    <div id="html" class="content-section">
+  <div id="html" class="content-section">
+    <div class="copyable-container">
       <textarea id="html-pre" readonly></textarea>
+      <button id="html-copy-btn" class="copy-button">Copy HTML</button>
     </div>
+  </div>
 
-    <div id="md" class="content-section">
+  <div id="md" class="content-section">
+    <div class="copyable-container">
       <textarea id="md-pre" readonly></textarea>
+      <button id="md-copy-btn" class="copy-button">Copy Markdown</button>
     </div>
+  </div>
 
-  </body>
+</body>
+
 </html>

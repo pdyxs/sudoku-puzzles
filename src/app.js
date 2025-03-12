@@ -8,40 +8,40 @@ const iframe = document.getElementById("frame");
 const menuButtons = document.querySelectorAll(".menu-button");
 const contentSections = document.querySelectorAll(".content-section");
 
-let currentSeriesIndex, 
-    currentPuzzleIndex, 
+let currentSeriesIndex,
+    currentPuzzleIndex,
     currentSection,
     processedPuzzle;
 
 function populateSeriesDropdown() {
-  const seriesDropdown = document.getElementById('series-dropdown');
-  seriesDropdown.innerHTML = '';
-  
-  series.forEach((seriesItem, index) => {
-    const option = document.createElement('option');
-    option.value = index;
-    option.textContent = seriesItem.name;
-    if (index === currentSeriesIndex) {
-      option.selected = true;
-    }
-    seriesDropdown.appendChild(option);
-  });
+    const seriesDropdown = document.getElementById('series-dropdown');
+    seriesDropdown.innerHTML = '';
+
+    series.forEach((seriesItem, index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.textContent = seriesItem.name;
+        if (index === currentSeriesIndex) {
+            option.selected = true;
+        }
+        seriesDropdown.appendChild(option);
+    });
 }
 
 function populatePuzzleDropdown() {
-  const puzzleDropdown = document.getElementById('puzzle-dropdown');
-  const currentSeries = series[currentSeriesIndex];
-  puzzleDropdown.innerHTML = '';
-  
-  currentSeries.puzzles.forEach((puzzleItem, index) => {
-    const option = document.createElement('option');
-    option.value = index;
-    option.textContent = puzzleItem.puzzle.metadata.title;
-    if (index === currentPuzzleIndex) {
-      option.selected = true;
-    }
-    puzzleDropdown.appendChild(option);
-  });
+    const puzzleDropdown = document.getElementById('puzzle-dropdown');
+    const currentSeries = series[currentSeriesIndex];
+    puzzleDropdown.innerHTML = '';
+
+    currentSeries.puzzles.forEach((puzzleItem, index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.textContent = puzzleItem.puzzle.metadata.title;
+        if (index === currentPuzzleIndex) {
+            option.selected = true;
+        }
+        puzzleDropdown.appendChild(option);
+    });
 }
 
 function updateActiveSection(targetId) {
@@ -100,7 +100,7 @@ menuButtons.forEach(button => {
 
 // Eruda
 function setErudaPosition() {
-    eruda.position({x: document.body.clientWidth-45, y: 0});
+    eruda.position({ x: document.body.clientWidth - 45, y: 0 });
 }
 setErudaPosition();
 addEventListener("resize", setErudaPosition)
@@ -111,17 +111,17 @@ function loadPuzzle() {
 
     // Process the new puzzle
     processedPuzzle = currentPuzzleObj.process(currentPuzzleObj.puzzle);
-    
+
     // Update all UI components
     updatePuzzleUI(currentSeries, currentPuzzleObj);
 
     // Initialize dropdowns
     populateSeriesDropdown();
     populatePuzzleDropdown();
-    
+
     // If we're in preview mode, refresh the iframe
     if (document.body.classList.contains('preview')) {
-      showPreview();
+        showPreview();
     }
 
     if (document.body.classList.contains('md') && !currentPuzzleObj.markdown) {
@@ -167,7 +167,7 @@ function updatePuzzleUI(currentSeries, currentPuzzle) {
     const otherSeriesPuzzles = series[currentSeriesIndex].puzzles.filter(p => p.lmd !== undefined && p.puzzle?.metadata?.title !== puzzle?.metadata?.title);
     if (!hidePuzzleList && otherSeriesPuzzles.length > 0) {
         let postHtml = `<h4 style="margin-bottom: 0">More ${seriesName} puzzles:</h4>\n<ul style="margin-top: 0.4em">\n`;
-        postHtml += otherSeriesPuzzles.map(({puzzle, lmd}) => `\t<li><a href="${lmd}">${puzzle.metadata.title}</a></li>`).join("\n");
+        postHtml += otherSeriesPuzzles.map(({ puzzle, lmd }) => `\t<li><a href="${lmd}">${puzzle.metadata.title}</a></li>`).join("\n");
         postHtml += "\n</ul>";
         document.getElementById("post").innerHTML = postHtml;
     }
@@ -198,7 +198,7 @@ function updatePuzzleUI(currentSeries, currentPuzzle) {
 window.addEventListener('popstate', initializeFromUrl);
 
 // Event listeners for dropdowns
-document.getElementById('series-dropdown').addEventListener('change', function() {
+document.getElementById('series-dropdown').addEventListener('change', function () {
     currentSeriesIndex = parseInt(this.value);
     currentPuzzleIndex = series[currentSeriesIndex].puzzles.length - 1; // Default to last puzzle in series
     populatePuzzleDropdown();
@@ -206,13 +206,89 @@ document.getElementById('series-dropdown').addEventListener('change', function()
 
     updateUrl();
 });
-  
-document.getElementById('puzzle-dropdown').addEventListener('change', function() {
+
+document.getElementById('puzzle-dropdown').addEventListener('change', function () {
     currentPuzzleIndex = parseInt(this.value);
     loadPuzzle();
     updateUrl();
 });
 
+
+// Copy button functionality
+function setupCopyButtons() {
+    const htmlCopyBtn = document.getElementById('html-copy-btn');
+    const mdCopyBtn = document.getElementById('md-copy-btn');
+
+    if (htmlCopyBtn) {
+        htmlCopyBtn.addEventListener('click', () => {
+            copyTextToClipboard(document.getElementById('html-pre').value, htmlCopyBtn);
+        });
+    }
+
+    if (mdCopyBtn) {
+        mdCopyBtn.addEventListener('click', () => {
+            copyTextToClipboard(document.getElementById('md-pre').value, mdCopyBtn);
+        });
+    }
+}
+
+function copyTextToClipboard(text, button) {
+    // Check if the Clipboard API is available
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(text)
+            .then(() => {
+                showCopiedFeedback(button);
+            })
+            .catch(err => {
+                console.error('Failed to copy text: ', err);
+                fallbackCopyTextToClipboard(text, button);
+            });
+    } else {
+        // Fallback for browsers without clipboard API
+        fallbackCopyTextToClipboard(text, button);
+    }
+}
+
+function fallbackCopyTextToClipboard(text, button) {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+
+    // Make the textarea invisible
+    textArea.style.position = "fixed";
+    textArea.style.left = "-999999px";
+    textArea.style.top = "-999999px";
+    document.body.appendChild(textArea);
+
+    textArea.focus();
+    textArea.select();
+
+    try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+            showCopiedFeedback(button);
+        } else {
+            button.textContent = "Copy failed";
+        }
+    } catch (err) {
+        console.error('Fallback: Could not copy text: ', err);
+        button.textContent = "Copy failed";
+    }
+
+    document.body.removeChild(textArea);
+}
+
+function showCopiedFeedback(button) {
+    const originalText = button.textContent;
+    button.textContent = "Copied!";
+    button.classList.add("copied");
+
+    setTimeout(() => {
+        button.textContent = originalText;
+        button.classList.remove("copied");
+    }, 2000);
+}
+
+setupCopyButtons();
 initializeFromUrl();
 
 //Preview
