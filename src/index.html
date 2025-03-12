@@ -9,7 +9,7 @@
     <script>eruda.init();</script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="preview">
+  <body class="overview">
     <iframe id="frame"></iframe>
 
     <div class="menu-bar">
@@ -17,6 +17,14 @@
       <button class="menu-button" data-target="preview">Preview</button>
       <button class="menu-button" data-target="html">HTML</button>
       <button id="markdown-btn" class="menu-button" data-target="md">Markdown</button>
+      <div class="dropdown-container">
+        <select id="series-dropdown" class="dropdown">
+          <!-- Will be populated dynamically -->
+        </select>
+        <select id="puzzle-dropdown" class="dropdown">
+          <!-- Will be populated dynamically -->
+        </select>
+      </div>
     </div>
 
     <div id="overview" class="content-section">

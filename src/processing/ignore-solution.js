@@ -25,7 +25,6 @@ export function ignoreSolutionOutside(data, [startRow, endRow], [startCol, endCo
         }
     }
 
-    console.log(newSoln);
     data.metadata.solution = newSoln;
 
 }
