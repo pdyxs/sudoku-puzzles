@@ -44,12 +44,12 @@ const rules = texts.rules.default;
 const msgCorrect = texts.msgcorrect.default;
 const preamble = texts.preamble.default;
 
-const sudokupad = "https://sudokupad.app/54qexpubot";
+const sudokupad = "https://sudokupad.app/pdyxs/this-is-how-you-learn-the-time-war";
 const lmd = "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000M6F";
 
 const markdown = createMarkdown(
-    puzzle.metadata.title, 
-    texts.preamble.raw, 
+    puzzle.metadata.title,
+    texts.preamble.raw,
     texts.rules.raw,
     sudokupad,
     lmd
@@ -60,8 +60,8 @@ export default {
     process: (data) => {
         addRules(data, rules + texts.rulesPostSudokupad.default);
         addMsgCorrect(data, msgCorrect);
-        hideGridOutside(data, [0,5], [0,5]);
-        generateRowCols(data, [0,5], [0,5]);
+        hideGridOutside(data, [0, 5], [0, 5]);
+        generateRowCols(data, [0, 5], [0, 5]);
 
         const padding = 0.1;
 

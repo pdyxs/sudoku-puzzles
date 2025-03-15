@@ -203,7 +203,6 @@ async function generateSudokupadLink() {
 
     try {
         // Set button to loading state
-        const originalText = generateButton.textContent;
         generateButton.textContent = "Generating...";
         generateButton.disabled = true;
 

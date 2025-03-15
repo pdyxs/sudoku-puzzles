@@ -16,5 +16,5 @@ export default {
     preamble,
     lmd: "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000LQI",
     imgId: "000SRO",
-    sudokupad: "https://sudokupad.app/13ifkj2xvl",
+    sudokupad: "https://sudokupad.app/pdyxs/a-murder-most-fogged",
 };

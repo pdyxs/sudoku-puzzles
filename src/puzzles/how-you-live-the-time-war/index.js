@@ -20,12 +20,12 @@ const rules = texts.rules.default;
 const msgCorrect = texts.msgcorrect.default;
 const preamble = texts.preamble.default;
 
-const sudokupad = "https://sudokupad.app/7mqh4sa9jo";
+const sudokupad = "https://sudokupad.app/pdyxs/this-is-how-you-live-the-time-war";
 const lmd = "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000M70";
 
 const markdown = createMarkdown(
-    puzzle.metadata.title, 
-    texts.preamble.raw, 
+    puzzle.metadata.title,
+    texts.preamble.raw,
     texts.rules.raw,
     sudokupad,
     lmd
@@ -85,7 +85,7 @@ export default {
                 "rounded": true,
                 "backgroundColor": "#FFFFFF",
                 "borderColor": "#000000"
-            },{
+            }, {
                 center: [r, c],
                 width: 0.32,
                 height: 0.07,
@@ -93,7 +93,7 @@ export default {
                 borderColor: "#00000000",
                 target: "overlay",
                 angle: 45
-            },{
+            }, {
                 center: [r, c],
                 width: 0.32,
                 height: 0.07,

@@ -14,5 +14,5 @@ export default {
     preamble,
     lmd: "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000LE5",
     imgId: "000SCV",
-    sudokupad: "https://sudokupad.app/rvs0kjqaw5",
+    sudokupad: "https://sudokupad.app/pdyxs/the-grid-of-forking-paths",
 };

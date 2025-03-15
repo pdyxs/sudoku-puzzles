@@ -6,17 +6,17 @@ import { addMsgCorrect, addRules } from "../../processing/messages";
 import { createAdjacentRevealableFogTriggers } from "../../processing/selective-adjacent-fog";
 
 const unshadedArray = [
-    [1, 1, 1,   0, 0, 0,   0, 0, 0],
-    [1, 0, 1,   0, 1, 1,   0, 1, 0],
-    [1, 0, 0,   0, 0, 1,   1, 1, 0],
+    [1, 1, 1, 0, 0, 0, 0, 0, 0],
+    [1, 0, 1, 0, 1, 1, 0, 1, 0],
+    [1, 0, 0, 0, 0, 1, 1, 1, 0],
 
-    [1, 1, 1,   0, 1, 1,   0, 0, 0],
-    [1, 0, 1,   1, 1, 0,   0, 1, 0],
-    [1, 0, 0,   1, 0, 0,   1, 1, 0],
-    
-    [1, 1, 0,   1, 1, 1,   1, 0, 0],
-    [1, 0, 0,   0, 0, 0,   1, 1, 0],
-    [1, 1, 1,   1, 1, 0,   0, 0, 0]
+    [1, 1, 1, 0, 1, 1, 0, 0, 0],
+    [1, 0, 1, 1, 1, 0, 0, 1, 0],
+    [1, 0, 0, 1, 0, 0, 1, 1, 0],
+
+    [1, 1, 0, 1, 1, 1, 1, 0, 0],
+    [1, 0, 0, 0, 0, 0, 1, 1, 0],
+    [1, 1, 1, 1, 1, 0, 0, 0, 0]
 ];
 
 export default {
@@ -32,5 +32,5 @@ export default {
     preamble,
     imgId: "000T0R",
     lmd: "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000LXM",
-    sudokupad: "https://sudokupad.app/otswx1r68x",
+    sudokupad: "https://sudokupad.app/pdyxs/some-things-fogn",
 };

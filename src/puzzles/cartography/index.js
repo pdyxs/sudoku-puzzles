@@ -18,5 +18,5 @@ export default {
     preamble,
     lmd: "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000LRL",
     imgId: "000STE",
-    sudokupad: "https://sudokupad.app/210jn6fmnj",
+    sudokupad: "https://sudokupad.app/pdyxs/cartography",
 };
