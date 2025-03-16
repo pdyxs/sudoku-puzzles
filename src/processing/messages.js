@@ -1,5 +1,6 @@
 import { convert } from "html-to-text";
 import { HtmlRules, MarkdownRules } from "../rules";
+import SocialSnippet from "../snippets/social.md";
 
 export function replaceUrls(text, urls) {
     urls.forEach(([name, url]) => {
@@ -28,11 +29,11 @@ export function createMarkdown(name, preambeMd, rulesMd, sudokupad, lmd) {
 }
 
 export function addRules(data, RulesHtml) {
-    data.metadata.rules = 
+    data.metadata.rules =
         convert(RulesHtml, {
             wordwrap: false,
             formatters: {
-                markdownLinkFormatter: function(elem, walk, builder, formatOptions) {
+                markdownLinkFormatter: function (elem, walk, builder, formatOptions) {
                     builder.addInline(formatOptions.prefix);
                     const anchorFormatter = builder.options.formatters['anchor'];
                     if (anchorFormatter) {
@@ -41,9 +42,9 @@ export function addRules(data, RulesHtml) {
                 }
             },
             selectors: [
-                { selector: 'strong', format: 'inlineSurround', options: {prefix: '*', suffix: '*'}},
-                { 
-                    selector: 'a', 
+                { selector: 'strong', format: 'inlineSurround', options: { prefix: '*', suffix: '*' } },
+                {
+                    selector: 'a',
                     format: 'markdownLinkFormatter',
                     options: {
                         prefix: '[',
@@ -52,11 +53,20 @@ export function addRules(data, RulesHtml) {
                 }
             ]
         })
-        .replaceAll("\n\n *", "\n *");
+            .replaceAll("\n\n *", "\n *");
 }
 
 export function addMsgCorrect(data, MsgCorrectHTML) {
-    if (MsgCorrectHTML.length > 0) {
-        data.metadata.msgcorrect = convert(MsgCorrectHTML, {wordwrap: false});
-    }
+    data.metadata.msgcorrect = convert(MsgCorrectHTML + SocialSnippet, {
+        wordwrap: false,
+        selectors: [
+            {
+                selector: 'a',
+                format: 'anchor',
+                options: {
+                    ignoreHref: true
+                }
+            }
+        ]
+    });
 }

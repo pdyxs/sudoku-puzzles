@@ -163,7 +163,7 @@ pre {
 /* Generate Link Button */
 .generate-link-btn {
     padding: 8px 15px;
-    margin: 10px 0;
+    margin: 10px 10px 10px 0;
     background-color: #2196F3;
     color: white;
     border: none;

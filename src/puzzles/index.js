@@ -12,6 +12,8 @@ import howYouLearnTheTimeWar from './how-you-learn-the-time-war';
 import howTheTimeWarWorksUnsolved from "./how-the-time-war-works-unsolved";
 import howTheTimeWarWorksSolved from "./how-the-time-war-works-solved";
 import sunnyWithAChanceOfFog from "./sunny-with-a-chance-of-fog";
+import cityscrapers from "./cityscrapers";
+import littleFillers from "./little-fillers";
 
 export const series = [
     {
@@ -30,7 +32,9 @@ export const series = [
     {
         name: "Convergent Clues",
         puzzles: [
-            littleFillers2
+            littleFillers,
+            littleFillers2,
+            cityscrapers
         ]
     },
     {

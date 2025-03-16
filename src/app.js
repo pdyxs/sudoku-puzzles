@@ -1,6 +1,7 @@
 import { PuzzleZipper } from "./sudokupad/puzzlezipper";
 import { loadFPuzzle } from "./sudokupad/fpuzzlesdecoder";
 import { series } from "./puzzles";
+import SocialSnippet from "./snippets/social.md";
 
 const iframe = document.getElementById("frame");
 
@@ -147,6 +148,9 @@ function updatePuzzleUI() {
         markdown,
     } = series[currentSeriesIndex].puzzles[currentPuzzleIndex];
 
+    //Preview link
+    document.getElementById("previewLink").setAttribute("href", getPreviewUrl());
+
     //Overview
     document.getElementById("puzzle-title").innerHTML = processedPuzzle.metadata.title;
     document.getElementById("puzzle-rules").innerHTML = rules;
@@ -169,6 +173,7 @@ function updatePuzzleUI() {
         let postHtml = `<h4 style="margin-bottom: 0">More ${seriesName} puzzles:</h4>\n<ul style="margin-top: 0.4em">\n`;
         postHtml += otherSeriesPuzzles.map(({ puzzle, lmd }) => `\t<li><a href="${lmd}">${puzzle.metadata.title}</a></li>`).join("\n");
         postHtml += "\n</ul>";
+        postHtml += SocialSnippet;
         document.getElementById("post").innerHTML = postHtml;
     }
 
@@ -349,7 +354,11 @@ initializeFromUrl();
 
 //Preview
 function showPreview() {
-    iframe.src = "https://sudokupad.app/scf?puzzleid=" + encodeSCLPuz(processedPuzzle);
+    iframe.src = getPreviewUrl();
+}
+
+function getPreviewUrl() {
+    return "https://sudokupad.app/scf?puzzleid=" + encodeSCLPuz(processedPuzzle);
 }
 
 function encodeSCLPuz(puzzle) {
