@@ -41,4 +41,5 @@ export default {
     sudokupad,
     lmd,
     imgId: "000TP7",
+    solveguide: texts.solveguide.default,
 };

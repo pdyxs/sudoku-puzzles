@@ -146,6 +146,7 @@ function updatePuzzleUI() {
         sudokupad,
         imgId,
         markdown,
+        solveguide,
     } = series[currentSeriesIndex].puzzles[currentPuzzleIndex];
 
     //Preview link
@@ -175,6 +176,11 @@ function updatePuzzleUI() {
         postHtml += "\n</ul>";
         postHtml += SocialSnippet;
         document.getElementById("post").innerHTML = postHtml;
+    }
+
+    if (solveguide !== undefined) {
+        document.getElementById("solve-guide").innerHTML =
+            `<h3>Solve Guide</h3>${solveguide}`;
     }
 
     //HTML
