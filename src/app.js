@@ -1,7 +1,6 @@
 import { PuzzleZipper } from "./sudokupad/puzzlezipper";
 import { loadFPuzzle } from "./sudokupad/fpuzzlesdecoder";
-import { series } from "./puzzles";
-import SocialSnippet from "./snippets/social.md";
+import { series, snippets } from "./data";
 
 const iframe = document.getElementById("frame");
 
@@ -174,7 +173,7 @@ function updatePuzzleUI() {
         let postHtml = `<h4 style="margin-bottom: 0">More ${seriesName} puzzles:</h4>\n<ul style="margin-top: 0.4em">\n`;
         postHtml += otherSeriesPuzzles.map(({ puzzle, lmd }) => `\t<li><a href="${lmd}">${puzzle.metadata.title}</a></li>`).join("\n");
         postHtml += "\n</ul>";
-        postHtml += SocialSnippet;
+        postHtml += (snippets.contact?.default || "");
         document.getElementById("post").innerHTML = postHtml;
     }
 

@@ -1,6 +1,6 @@
 import { convert } from "html-to-text";
 import { HtmlRules, MarkdownRules } from "../rules";
-import SocialSnippet from "../snippets/social.md";
+import { snippets } from "../data";
 
 export function replaceUrls(text, urls) {
     urls.forEach(([name, url]) => {
@@ -57,7 +57,7 @@ export function addRules(data, RulesHtml) {
 }
 
 export function addMsgCorrect(data, MsgCorrectHTML) {
-    data.metadata.msgcorrect = convert(MsgCorrectHTML + SocialSnippet, {
+    data.metadata.msgcorrect = convert(MsgCorrectHTML + (snippets.contact?.default || ""), {
         wordwrap: false,
         selectors: [
             {
