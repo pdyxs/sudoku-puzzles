@@ -40,4 +40,10 @@ The markdown window generates markdown that's suitable for posting to platforms 
 
 ## Using this for your own puzzles
 
-If you want to use this for your own puzzles, I recommend forking this repository and setting up 
+If you want to use this for your own puzzles, you should fork this repository and create your own folder in the `src/data` directory. The easiest way to do this is to:
+* copy the `pdyxs` directory;
+* remove all directories in the new `puzzles` directory;
+* remove all references to specific puzzles from `puzzles/index.js`
+* remove or update all contents of the `snippets` directory
+
+You should then update `data/index.js` to point to your new directories.
