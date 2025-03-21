@@ -1,9 +1,11 @@
 {sudoku}
 
-Counting circles: A digit N within a circle appears in circles N times.
+Renban Lines: Digits on a line form a set of non-repeating, consecutive digits in any order.
 
-Encroaching fog: The grid is not covered in fog. Placing a correct digit in a cell will summon fog to that cell, and in some cases, other cells as well. Clues beneath the fog are no longer valid. No guessing or erasing of digits is required (though you might need to erase pencilmarks).
+Kropki: If two cells do not have a grid line between them, their digits are consecutive. If a line is hollow between two cells, the digit in one cell is double the other.
 
-Grid-line Kropki: If two cells do not have a grid line between them, their digits are consecutive.
+Encroaching fog: The grid is not covered in fog. Placing a correct digit in a cell will summon fog to that cell, and to the 8 surrounding cells. No guessing or erasing of digits is required.
 
-Note: The colour tool will not work, and the line tool is strange. Such is the price of summoning fog!
+Notes: 
+* In this puzzle, constraints are being rendered in non-standard ways.
+* The colour tool will not work, and the line tool is strange. Such is the price of summoning fog!
