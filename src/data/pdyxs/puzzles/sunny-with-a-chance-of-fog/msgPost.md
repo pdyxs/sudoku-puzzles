@@ -1,3 +1,3 @@
 #### How I made this
 
-If you'd like to know how this puzzle was made, check out my post about it here
+I've written a short post about how I made this work. Check it out [here](https://pdyxs.substack.com/p/summoning-fog).

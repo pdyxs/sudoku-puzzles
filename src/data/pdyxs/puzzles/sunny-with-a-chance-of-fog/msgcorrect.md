@@ -1,0 +1,1 @@
+Congratulations! There is now fog everywhere.

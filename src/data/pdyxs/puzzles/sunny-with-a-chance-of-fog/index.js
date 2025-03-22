@@ -22,7 +22,8 @@ export default {
 
         const fogColor = "#A3A3A3";
 
-        //Setup renban lines (hollow and non-hollow) for later
+        //Step 1: Setup renban lines (hollow and non-hollow) for later, and 
+        // place renbans onto the 'cell-grids' layer
         const foggedRenbans = [];
         const foggedKropkiLines = [];
         data.lines.forEach((line) => {
@@ -43,7 +44,7 @@ export default {
             }
         });
 
-        //Step 1: make the fog, look like not fog
+        //Step 2: make the fog, look like not fog
         let p = 0.01;
         for (let r = 0; r !== 9; ++r) {
             for (let c = 0; c !== 9; ++c) {
@@ -62,7 +63,7 @@ export default {
             }
         }
 
-        //Step 2: Create fog, using a transparent layer
+        //Step 3: Create fog, using a transparent layer
         for (let r = 0; r !== 9; ++r) {
             for (let c = 0; c !== 9; ++c) {
                 data.lines.push({
@@ -80,10 +81,10 @@ export default {
             }
         }
 
-        //Step 3: Add overlays to remove grid lines wherever kropki dots are
+        //Step 4: Add overlays to remove grid lines wherever kropki dots are
         p = 0.006;
         const lp = 0.024;
-        const w = 0.01;
+        const w = 0.015;
         data.overlays.forEach(({ backgroundColor, center: [r, c] }) => {
             if (backgroundColor === "#FFFFFF") {
                 if (Number.isInteger(r)) {
@@ -125,10 +126,10 @@ export default {
         });
         data.overlays = [];
 
-        //Step 4: Render renbans over the fog
+        //Step 5: Render renbans over the fog
         data.lines.push(...foggedRenbans);
 
-        //Step 5: Render black kropkis over the renbans
+        //Step 6: Render black kropkis over the renbans
         data.lines.push(...foggedKropkiLines);
         return data;
     },
