@@ -65,6 +65,10 @@ The core exports for a puzzle are:
 The `src/processing` directory contains a number of utilities to use here, including:
 * `addRules`: add/replace the puzzle's rules
 * `addMsgCorrect`: add/replace the puzzles message upon completion
+* utilities for editing messages:
+  * `replaceUrls` - replace a named link with a specified url
+  * `replaceImages` - replace a named image(format `img:name`) with an image code from logic masters germany
+  * `replaceRules` replace any instances of `{ruleFileName}` with the contents of the file in `src/rules`
 * utilities for grids that are larger than the puzzle:
   * `hideGridOutside`: places lines that hide the grid outside a given set of rows and columns
   * `ignoreSolutionOutside`: places '?' in the checked solution outside a given set of rows and columns

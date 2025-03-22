@@ -24,10 +24,6 @@ export function replaceRules(text) {
     });
 }
 
-export function createMarkdown(name, preambeMd, rulesMd, sudokupad, lmd) {
-    return `**${name}**\n\n${preambeMd}\n\n**Rules**\n\n${rulesMd}\n\n**Play**\n\nLMD: ${lmd}\nSudokupad: ${sudokupad}`;
-}
-
 export function addRules(data, RulesHtml) {
     data.metadata.rules =
         convert(RulesHtml, {

@@ -1,41 +1,20 @@
-import * as allTexts from "./*.md";
+import * as texts from "./*.md";
 import puzzle from "./puzzle.json";
-import { addMsgCorrect, addRules, createMarkdown, replaceRules } from "~/src/processing/messages";
+import { addMsgCorrect, addRules, replaceRules } from "~/src/processing/messages";
 import { generateRowCols } from "~/src/processing/rowcol";
 import { hideGridOutside } from "~/src/processing/hide-grid";
 import { rulesPosts } from "../how-you-learn-the-time-war";
 
-const texts = Object.entries(allTexts).reduce((o, [name, text]) => {
-    return {
-        ...o,
-        [name]: {
-            default: text.default,
-            raw: text.raw
-        }
-    }
-}, {});
-
 replaceRules(texts.rules);
-const rules = texts.rules.default;
-const msgCorrect = texts.msgcorrect.default;
-const preamble = texts.preamble.default;
 
 const sudokupad = "https://sudokupad.app/pdyxs/this-is-how-you-live-the-time-war";
 const lmd = "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000M70";
 
-const markdown = createMarkdown(
-    puzzle.metadata.title,
-    texts.preamble.raw,
-    texts.rules.raw,
-    sudokupad,
-    lmd
-)
-
 export default {
     puzzle,
     process: (data) => {
-        addRules(data, rules + rulesPosts.sudokupad.default);
-        addMsgCorrect(data, msgCorrect);
+        addRules(data, texts.rules.default + rulesPosts.sudokupad.default);
+        addMsgCorrect(data, texts.msgcorrect.default);
         generateRowCols(data, [0, 8], [0, 8]);
         hideGridOutside(data, [0, 8], [0, 8]);
 
@@ -112,10 +91,8 @@ export default {
 
         return data;
     },
-    rules: rules + rulesPosts.html.default,
-    msgCorrect,
-    preamble,
-    markdown,
+    ...texts,
+    rulesPostHtml: rulesPosts.html,
     sudokupad,
     imgId: "000TCL",
     lmd

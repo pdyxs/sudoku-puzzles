@@ -1,20 +1,10 @@
-import * as allTexts from "./*.md";
+import * as texts from "./*.md";
 import puzzle from "./puzzle.json";
-import { addMsgCorrect, addRules, createMarkdown, replaceImages, replaceRules, replaceUrls } from "~/src/processing/messages";
+import { addMsgCorrect, addRules, replaceImages, replaceRules, replaceUrls } from "~/src/processing/messages";
 import { generateRowCols } from "~/src/processing/rowcol";
 import { hideGridOutside } from "~/src/processing/hide-grid";
 import howTheTimeWarWorksUnsolved from "../how-the-time-war-works-unsolved";
 import howTheTimeWarWorksSolved from "../how-the-time-war-works-solved";
-
-const texts = Object.entries(allTexts).reduce((o, [name, text]) => {
-    return {
-        ...o,
-        [name]: {
-            default: text.default,
-            raw: text.raw
-        }
-    }
-}, {});
 
 const urls = [
     ["sample-url", howTheTimeWarWorksUnsolved.sudokupad],
@@ -41,25 +31,15 @@ export const rulesPosts = {
 
 replaceRules(texts.rules);
 const rules = texts.rules.default;
-const msgCorrect = texts.msgcorrect.default;
-const preamble = texts.preamble.default;
 
 const sudokupad = "https://sudokupad.app/pdyxs/this-is-how-you-learn-the-time-war";
 const lmd = "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000M6F";
-
-const markdown = createMarkdown(
-    puzzle.metadata.title,
-    texts.preamble.raw,
-    texts.rules.raw,
-    sudokupad,
-    lmd
-)
 
 export default {
     puzzle,
     process: (data) => {
         addRules(data, rules + texts.rulesPostSudokupad.default);
-        addMsgCorrect(data, msgCorrect);
+        addMsgCorrect(data, texts.msgcorrect.default);
         hideGridOutside(data, [0, 5], [0, 5]);
         generateRowCols(data, [0, 5], [0, 5]);
 
@@ -89,11 +69,8 @@ export default {
 
         return data;
     },
-    rules: rules + texts.rulesPostHtml.default,
-    msgCorrect,
-    preamble,
+    ...texts,
     imgId: "000TBV",
     sudokupad,
-    markdown,
     lmd
 };

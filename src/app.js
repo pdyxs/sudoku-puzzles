@@ -1,8 +1,9 @@
-import { PuzzleZipper } from "./sudokupad/puzzlezipper";
-import { loadFPuzzle } from "./sudokupad/fpuzzlesdecoder";
-import { series, snippets } from "./data";
-
-const iframe = document.getElementById("frame");
+import { series } from "./data";
+import { renderHTML } from "./rendering/html";
+import { renderMarkdown } from "./rendering/markdown";
+import { renderOverview } from "./rendering/overview";
+import { showPreview } from "./rendering/preview";
+import { encodeSCLPuz } from "./util/encodePuzzle";
 
 // Menu
 const menuButtons = document.querySelectorAll(".menu-button");
@@ -10,8 +11,7 @@ const contentSections = document.querySelectorAll(".content-section");
 
 let currentSeriesIndex,
     currentPuzzleIndex,
-    currentSection,
-    processedPuzzle;
+    currentSection;
 
 function populateSeriesDropdown() {
     const seriesDropdown = document.getElementById('series-dropdown');
@@ -62,7 +62,7 @@ function updateActiveSection(targetId) {
     currentSection = targetId;
 
     if (targetId === 'preview') {
-        showPreview();
+        showPreview(series[currentSeriesIndex].puzzles[currentPuzzleIndex]);
     }
 }
 
@@ -110,7 +110,7 @@ function loadPuzzle() {
     const currentPuzzleObj = currentSeries.puzzles[currentPuzzleIndex];
 
     // Process the new puzzle
-    processedPuzzle = currentPuzzleObj.process(currentPuzzleObj.puzzle);
+    currentPuzzleObj.processedPuzzle = currentPuzzleObj.process(currentPuzzleObj.puzzle);
 
     // Update all UI components
     updatePuzzleUI();
@@ -121,7 +121,7 @@ function loadPuzzle() {
 
     // If we're in preview mode, refresh the iframe
     if (document.body.classList.contains('preview')) {
-        showPreview();
+        showPreview(series[currentSeriesIndex].puzzles[currentPuzzleIndex]);
     }
 
     if (document.body.classList.contains('md') && !currentPuzzleObj.markdown) {
@@ -131,78 +131,12 @@ function loadPuzzle() {
 
 //Initialise puzzle
 function updatePuzzleUI() {
+    const seriesObj = series[currentSeriesIndex];
+    const puzzleObj = series[currentSeriesIndex].puzzles[currentPuzzleIndex];
 
-    const {
-        name: seriesName,
-        hidePuzzleList
-    } = series[currentSeriesIndex];
-
-    const {
-        puzzle,
-        rules,
-        msgCorrect,
-        preamble,
-        sudokupad,
-        imgId,
-        markdown,
-        solveguide,
-    } = series[currentSeriesIndex].puzzles[currentPuzzleIndex];
-
-    //Preview link
-    document.getElementById("previewLink").setAttribute("href", getPreviewUrl());
-
-    //Overview
-    document.getElementById("puzzle-title").innerHTML = processedPuzzle.metadata.title;
-    document.getElementById("puzzle-rules").innerHTML = rules;
-    if (preamble !== undefined) {
-        document.getElementById("puzzle-preamble").innerHTML = preamble;
-    }
-    if (msgCorrect !== undefined) {
-        document.getElementById("puzzle-msgcorrect").innerHTML = msgCorrect;
-    }
-
-    if (sudokupad !== undefined) {
-        document.getElementById("sudokupad-link").innerText = "Play in Sudokupad"
-        document.getElementById("sudokupad-link").setAttribute("href", sudokupad);
-    } else {
-        document.getElementById("sudokupad-link").innerText = "No Sudokupad Link set"
-    }
-
-    const otherSeriesPuzzles = series[currentSeriesIndex].puzzles.filter(p => p.lmd !== undefined && p.puzzle?.metadata?.title !== puzzle?.metadata?.title);
-    if (!hidePuzzleList && otherSeriesPuzzles.length > 0) {
-        let postHtml = `<h4 style="margin-bottom: 0">More ${seriesName} puzzles:</h4>\n<ul style="margin-top: 0.4em">\n`;
-        postHtml += otherSeriesPuzzles.map(({ puzzle, lmd }) => `\t<li><a href="${lmd}">${puzzle.metadata.title}</a></li>`).join("\n");
-        postHtml += "\n</ul>";
-        postHtml += (snippets.contact?.default || "");
-        document.getElementById("post").innerHTML = postHtml;
-    }
-
-    if (solveguide !== undefined) {
-        document.getElementById("solve-guide").innerHTML =
-            `<h3>Solve Guide</h3>${solveguide}`;
-    }
-
-    //HTML
-    const preSources = document.getElementById("html-pre-image").querySelectorAll(":scope > div");
-    const postSources = document.getElementById("html-post-image").querySelectorAll(":scope > div");
-    const preHtml = Array.from(preSources).map(s => s.innerHTML).join("\n\n");
-    const postHtml = Array.from(postSources).map(s => s.innerHTML).join("\n\n");
-    let imageHtml = "";
-    if (imgId !== undefined) {
-        document.getElementById("image-placeholder").innerHTML = `Image id: ${imgId}`;
-        imageHtml = `<div style="clear:both;text-align:center"><img:${imgId}></div>`;
-    }
-
-    const shownHtml = (preHtml + imageHtml + postHtml).replaceAll("||img:", "<img:").replaceAll("||", ">");
-    document.getElementById("html-pre").innerText = shownHtml;
-
-    //Markdown
-    if (markdown) {
-        document.getElementById("markdown-btn").classList.remove("hide");
-        document.getElementById("md-pre").innerHTML = markdown;
-    } else {
-        document.getElementById("markdown-btn").classList.add("hide");
-    }
+    renderOverview(seriesObj, puzzleObj);
+    renderHTML(seriesObj, puzzleObj);
+    renderMarkdown(seriesObj, puzzleObj);
 }
 
 window.addEventListener('popstate', initializeFromUrl);
@@ -212,6 +146,9 @@ async function generateSudokupadLink() {
     const generateButton = document.getElementById("generateLinkBtn");
 
     try {
+        const currentSeries = series[currentSeriesIndex];
+        const currentPuzzleObj = currentSeries.puzzles[currentPuzzleIndex];
+
         // Set button to loading state
         generateButton.textContent = "Generating...";
         generateButton.disabled = true;
@@ -222,7 +159,7 @@ async function generateSudokupadLink() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ puzzle: encodeSCLPuz(processedPuzzle) })
+            body: JSON.stringify({ puzzle: encodeSCLPuz(currentPuzzleObj.processedPuzzle) })
         });
 
         if (!response.ok) {
@@ -239,8 +176,6 @@ async function generateSudokupadLink() {
         const sudokupadUrl = `https://sudokupad.app/${data.shortid}`;
 
         // Update the current puzzle object
-        const currentSeries = series[currentSeriesIndex];
-        const currentPuzzleObj = currentSeries.puzzles[currentPuzzleIndex];
         currentPuzzleObj.sudokupad = sudokupadUrl;
 
         updatePuzzleUI();
@@ -357,16 +292,4 @@ function showCopiedFeedback(button) {
 setupCopyButtons();
 initializeFromUrl();
 
-//Preview
-function showPreview() {
-    iframe.src = getPreviewUrl();
-}
 
-function getPreviewUrl() {
-    return "https://sudokupad.app/scf?puzzleid=" + encodeSCLPuz(processedPuzzle);
-}
-
-function encodeSCLPuz(puzzle) {
-    const { zip } = PuzzleZipper;
-    return 'scl' + loadFPuzzle.compressPuzzle(zip(JSON.stringify(puzzle)));
-}
