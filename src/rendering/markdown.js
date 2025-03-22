@@ -1,16 +1,24 @@
 import { raw as markdownTemplate } from "./template.md";
 
 function getMarkdown(text) {
-    return text?.raw || undefined;
+    return text?.raw || "";
 }
 
-export function createMarkdown(name, preambeMd, rulesMd, sudokupad, lmd) {
+export function createMarkdown({
+    processedPuzzle,
+    preamble,
+    rules,
+    sudokupad,
+    lmd,
+    msgPost
+}) {
     const replacements = [
-        ["name", name],
-        ["preamble", preambeMd],
-        ["rules", rulesMd],
+        ["name", processedPuzzle.metadata.title],
+        ["preamble", getMarkdown(preamble)],
+        ["rules", getMarkdown(rules)],
         ["sudokupad", sudokupad],
-        ["lmd", lmd]
+        ["lmd", lmd],
+        ["msgPost", getMarkdown(msgPost)]
     ];
 
     return replacements.reduce((text, [key, replacement]) => {
@@ -18,23 +26,13 @@ export function createMarkdown(name, preambeMd, rulesMd, sudokupad, lmd) {
     }, markdownTemplate);
 }
 
-export function renderMarkdown({ }, {
-    processedPuzzle,
-    preamble,
-    rules,
-    sudokupad,
-    lmd
-}) {
-    const preambleMd = getMarkdown(preamble);
-    const rulesMd = getMarkdown(rules);
-    const name = processedPuzzle.metadata.title;
-
-    if (!rulesMd) {
+export function renderMarkdown({ }, puzzleObj) {
+    if (!puzzleObj.rules?.raw) {
         document.getElementById("markdown-btn").classList.add("hide");
         return;
     }
 
-    const markdown = createMarkdown(name, preambleMd, rulesMd, sudokupad, lmd);
+    const markdown = createMarkdown(puzzleObj);
 
     //Markdown
     document.getElementById("markdown-btn").classList.remove("hide");

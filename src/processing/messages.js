@@ -18,6 +18,7 @@ export function replaceImages(text, images) {
 export function replaceRules(text) {
     HtmlRules.forEach((rule, code) => {
         text.default = text.default.replaceAll(`<p>{${code}}</p>`, rule);
+        text.default = text.default.replaceAll(`{${code}}`, MarkdownRules.get(code))
     });
     MarkdownRules.forEach((rule, code) => {
         text.raw = text.raw.replaceAll(`{${code}}`, rule);

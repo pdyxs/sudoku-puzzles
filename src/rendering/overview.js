@@ -21,6 +21,7 @@ export function renderOverview({
         sudokupad,
         rulesPostHtml,
         solveguide,
+        msgPost,
     } = puzzleObj;
 
     //Preview link
@@ -44,7 +45,8 @@ export function renderOverview({
 
     const otherSeriesPuzzles = seriesPuzzles.filter(p => p.lmd !== undefined && p.puzzle?.metadata?.title !== puzzle?.metadata?.title);
     if (!hidePuzzleList && otherSeriesPuzzles.length > 0) {
-        let postHtml = `<h4 style="margin-bottom: 0">More ${seriesName} puzzles:</h4>\n<ul style="margin-top: 0.4em">\n`;
+        let postHtml = getHtml(msgPost);
+        postHtml += `<h4 style="margin-bottom: 0">More ${seriesName} puzzles:</h4>\n<ul style="margin-top: 0.4em">\n`;
         postHtml += otherSeriesPuzzles.map(({ puzzle, lmd }) => `\t<li><a href="${lmd}">${puzzle.metadata.title}</a></li>`).join("\n");
         postHtml += "\n</ul>";
         postHtml += (snippets.contact?.default || "");

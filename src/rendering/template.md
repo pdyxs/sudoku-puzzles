@@ -10,3 +10,5 @@
 
 LMD: {lmd}
 Sudokupad: {sudokupad}
+
+{msgPost}

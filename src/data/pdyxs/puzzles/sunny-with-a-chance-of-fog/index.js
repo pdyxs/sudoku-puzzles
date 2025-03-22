@@ -22,6 +22,7 @@ export default {
 
         const fogColor = "#A3A3A3";
 
+        //Setup renban lines (hollow and non-hollow) for later
         const foggedRenbans = [];
         const foggedKropkiLines = [];
         data.lines.forEach((line) => {
@@ -42,6 +43,7 @@ export default {
             }
         });
 
+        //Step 1: make the fog, look like not fog
         let p = 0.01;
         for (let r = 0; r !== 9; ++r) {
             for (let c = 0; c !== 9; ++c) {
@@ -60,28 +62,7 @@ export default {
             }
         }
 
-        const p2 = 0.115;
-        // data.underlays?.forEach(({ thickness, borderColor, center: [cy, cx] }) => {
-        //     data.lines.push({
-        //         d: `M ${cx * 64} ${cy * 64} m 0 -22 a 22 22 0 1 1 0 44 a 22 22 0 1 1 0 -44`,
-        //         color: borderColor,
-        //         thickness,
-        //         target: "cell-grids"
-        //     })
-
-        //     data.lines.push({
-        //         wayPoints: [
-        //             [cy - 0.5 + p2, cx - 0.5 + p2],
-        //             [cy - 0.5 + p2, cx + 0.5 - p2],
-        //             [cy + 0.5 - p2, cx + 0.5 - p2],
-        //             [cy + 0.5 - p2, cx - 0.5 + p2],
-        //         ],
-        //         fill: "#ffffff",
-        //         target: "overlay"
-        //     })
-        // });
-        // data.underlays = [];
-
+        //Step 2: Create fog, using a transparent layer
         for (let r = 0; r !== 9; ++r) {
             for (let c = 0; c !== 9; ++c) {
                 data.lines.push({
@@ -99,16 +80,23 @@ export default {
             }
         }
 
-        p = 0.013;
+        //Step 3: Add overlays to remove grid lines wherever kropki dots are
+        p = 0.006;
+        const lp = 0.024;
+        const w = 0.01;
         data.overlays.forEach(({ backgroundColor, center: [r, c] }) => {
             if (backgroundColor === "#FFFFFF") {
                 if (Number.isInteger(r)) {
+                    let cneg = Math.floor(c);
+                    let cpos = Math.ceil(c);
+                    cneg = cneg + (cneg % 3 === 0 ? lp : p);
+                    cpos = cpos - (cpos % 3 === 0 ? lp : p);
                     data.lines.push({
                         wayPoints: [
-                            [r - p * 2, c - 0.5 + p],
-                            [r - p * 2, c + 0.5 - p],
-                            [r + p * 2, c + 0.5 - p],
-                            [r + p * 2, c - 0.5 + p]
+                            [r - w, cneg],
+                            [r - w, cpos],
+                            [r + w, cpos],
+                            [r + w, cneg]
                         ],
                         color: "#ffffff00",
                         fill: fogColor,
@@ -116,12 +104,16 @@ export default {
                         target: "overlay"
                     });
                 } else {
+                    let rneg = Math.floor(r);
+                    let rpos = Math.ceil(r);
+                    rneg = rneg + (rneg % 3 === 0 ? lp : p);
+                    rpos = rpos - (rpos % 3 === 0 ? lp : p);
                     data.lines.push({
                         wayPoints: [
-                            [r - 0.5 + p, c - p * 2],
-                            [r - 0.5 + p, c + p * 2],
-                            [r + 0.5 - p, c + p * 2],
-                            [r + 0.5 - p, c - p * 2]
+                            [rpos, c - w],
+                            [rpos, c + w],
+                            [rneg, c + w],
+                            [rneg, c - w]
                         ],
                         color: "#ffffff00",
                         fill: fogColor,
@@ -133,10 +125,15 @@ export default {
         });
         data.overlays = [];
 
+        //Step 4: Render renbans over the fog
         data.lines.push(...foggedRenbans);
+
+        //Step 5: Render black kropkis over the renbans
         data.lines.push(...foggedKropkiLines);
         return data;
     },
     ...texts,
-    sudokupad: "https://sudokupad.app/pdyxs/sunny-with-a-chance-of-fog"
+    imgId: "000TTI",
+    sudokupad: "https://sudokupad.app/pdyxs/sunny-with-a-chance-of-fog",
+    lmd: "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000MJC"
 };
