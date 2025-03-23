@@ -9,7 +9,7 @@ export default {
     process: (data) => {
         addRules(data, rules);
         addMsgCorrect(data, msgCorrect);
-        
+
         for (let i = 1; i !== 11; ++i) {
             const wps1 = [
                 [[0, i], [0.97, i]],
@@ -40,7 +40,7 @@ export default {
             })));
         }
 
-        
+
         return data;
     },
     rules,
@@ -48,5 +48,5 @@ export default {
     preamble,
     lmd: "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000M09",
     imgId: "000T43",
-    sudokupad: "https://sudokupad.app/belm8cdujp"
+    sudokupad: "https://sudokupad.app/pdyxs/recounting-the-rooms"
 };

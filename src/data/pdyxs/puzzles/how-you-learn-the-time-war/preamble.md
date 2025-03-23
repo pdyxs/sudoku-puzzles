@@ -1,1 +1,1 @@
-*This is the first of two puzzles based on the novel 'This is how you lose the time war', which is one of my favourites of the last few years. This puzzle will help acclimatise you to the ruleset, and be ready for the (upcoming) 9x9 puzzle.*
+*This is the first of two puzzles based on the novel 'This is how you lose the time war', which is one of my favourites of the last few years. This puzzle will help acclimatise you to the ruleset, and be ready for the [9x9 puzzle](full-puzzle-url).*

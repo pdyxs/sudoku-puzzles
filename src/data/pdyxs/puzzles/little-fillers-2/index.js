@@ -14,6 +14,7 @@ export default {
     rules,
     msgCorrect,
     preamble,
+    sudokupad: "https://sudokupad.app/pdyxs/little-fillers-2",
     lmd: "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000LS4",
     imgId: "000STZ",
 };

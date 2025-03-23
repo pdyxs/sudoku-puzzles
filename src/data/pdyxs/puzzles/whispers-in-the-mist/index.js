@@ -16,5 +16,5 @@ export default {
     preamble,
     lmd: "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000LUE",
     imgId: "000SWV",
-    sudokupad: "https://sudokupad.app/j85f824ejc",
+    sudokupad: "https://sudokupad.app/pdyxs/whispers-in-the-mist",
 };

@@ -23,6 +23,6 @@ export default {
     },
     ...texts,
     sudokupad: "https://sudokupad.app/pdyxs/cityscrapers",
-    lmd: "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000MFZ&aktion=aktivieren",
+    lmd: "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000MFZ",
     imgId: "000TP7",
 };

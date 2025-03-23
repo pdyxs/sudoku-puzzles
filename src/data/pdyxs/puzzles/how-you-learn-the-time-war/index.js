@@ -6,6 +6,10 @@ import { hideGridOutside } from "~/src/processing/hide-grid";
 import howTheTimeWarWorksUnsolved from "../how-the-time-war-works-unsolved";
 import howTheTimeWarWorksSolved from "../how-the-time-war-works-solved";
 
+replaceUrls(texts.preamble,
+    [["full-puzzle-url", "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000M70"]]
+);
+
 const urls = [
     ["sample-url", howTheTimeWarWorksUnsolved.sudokupad],
     ["solution-url", howTheTimeWarWorksSolved.sudokupad]
