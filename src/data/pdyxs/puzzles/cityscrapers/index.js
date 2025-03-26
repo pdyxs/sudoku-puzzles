@@ -1,16 +1,8 @@
 import * as allTexts from "./*.md";
 import puzzle from "./puzzle.json";
-import { addMsgCorrect, addRules, replaceRules } from "~/src/processing/messages";
+import { addMsgCorrect, addRules, replaceRules, setupTexts } from "~/src/processing/messages";
 
-const texts = Object.entries(allTexts).reduce((o, [name, text]) => {
-    return {
-        ...o,
-        [name]: {
-            default: text.default,
-            raw: text.raw
-        }
-    }
-}, {});
+const texts = setupTexts(allTexts);
 
 replaceRules(texts.rules);
 

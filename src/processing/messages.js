@@ -2,6 +2,18 @@ import { convert } from "html-to-text";
 import { HtmlRules, MarkdownRules } from "../rules";
 import { snippets } from "../data";
 
+export function setupTexts(texts) {
+    return Object.entries(texts).reduce((o, [name, text]) => {
+        return {
+            ...o,
+            [name]: {
+                default: text.default,
+                raw: text.raw
+            }
+        }
+    }, {});
+}
+
 export function replaceUrls(text, urls) {
     urls.forEach(([name, url]) => {
         text.default = text.default.replace(`href="${name}"`, `href="${url}"`);

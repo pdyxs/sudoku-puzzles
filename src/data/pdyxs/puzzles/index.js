@@ -14,6 +14,7 @@ import howTheTimeWarWorksSolved from "./how-the-time-war-works-solved";
 import sunnyWithAChanceOfFog from "./sunny-with-a-chance-of-fog";
 import cityscrapers from "./cityscrapers";
 import littleFillers from "./little-fillers";
+import timesApart from "./times-apart";
 
 export const series = [
     {
@@ -38,12 +39,18 @@ export const series = [
         ]
     },
     {
+        name: "Timeline",
+        puzzles: [
+            timesApart,
+            howYouLearnTheTimeWar,
+            howYouLiveTheTimeWar,
+        ]
+    },
+    {
         name: "other",
         hidePuzzleList: true,
         puzzles: [
             plansOfAMedic,
-            howYouLearnTheTimeWar,
-            howYouLiveTheTimeWar,
             howTheTimeWarWorksUnsolved,
             howTheTimeWarWorksSolved
         ]

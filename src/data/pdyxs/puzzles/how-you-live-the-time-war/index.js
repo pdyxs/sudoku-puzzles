@@ -1,9 +1,11 @@
-import * as texts from "./*.md";
+import * as allTexts from "./*.md";
 import puzzle from "./puzzle.json";
-import { addMsgCorrect, addRules, replaceRules } from "~/src/processing/messages";
+import { addMsgCorrect, addRules, replaceRules, setupTexts } from "~/src/processing/messages";
 import { generateRowCols } from "~/src/processing/rowcol";
 import { hideGridOutside } from "~/src/processing/hide-grid";
 import { rulesPosts } from "../how-you-learn-the-time-war";
+
+const texts = setupTexts(allTexts);
 
 replaceRules(texts.rules);
 

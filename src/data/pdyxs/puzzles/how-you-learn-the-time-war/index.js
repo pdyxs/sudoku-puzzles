@@ -1,10 +1,12 @@
-import * as texts from "./*.md";
+import * as allTexts from "./*.md";
 import puzzle from "./puzzle.json";
-import { addMsgCorrect, addRules, replaceImages, replaceRules, replaceUrls } from "~/src/processing/messages";
+import { addMsgCorrect, addRules, replaceImages, replaceRules, replaceUrls, setupTexts } from "~/src/processing/messages";
 import { generateRowCols } from "~/src/processing/rowcol";
 import { hideGridOutside } from "~/src/processing/hide-grid";
 import howTheTimeWarWorksUnsolved from "../how-the-time-war-works-unsolved";
 import howTheTimeWarWorksSolved from "../how-the-time-war-works-solved";
+
+const texts = setupTexts(allTexts);
 
 replaceUrls(texts.preamble,
     [["full-puzzle-url", "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000M70"]]

@@ -10,7 +10,6 @@ export function renderHTML({ }, {
     const postHtml = Array.from(postSources).map(s => s.innerHTML).join("\n\n");
     let imageHtml = "";
     if (imgId !== undefined) {
-        document.getElementById("image-placeholder").innerHTML = `Image id: ${imgId}`;
         imageHtml = `<div style="clear:both;text-align:center"><img:${imgId}></div>`;
     }
 

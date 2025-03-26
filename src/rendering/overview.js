@@ -22,6 +22,7 @@ export function renderOverview({
         rulesPostHtml,
         solveguide,
         msgPost,
+        imgId,
     } = puzzleObj;
 
     //Preview link
@@ -32,6 +33,8 @@ export function renderOverview({
     document.getElementById("puzzle-rules").innerHTML = getHtml(rules) + getHtml(rulesPostHtml);
     if (preamble !== undefined) {
         document.getElementById("puzzle-preamble").innerHTML = getHtml(preamble);
+    } else {
+        document.getElementById("puzzle-preamble").innerHTML = "";
     }
 
     document.getElementById("puzzle-msgcorrect").innerHTML = getHtml(msgCorrect) + getHtml(msgcorrect);
@@ -58,5 +61,11 @@ export function renderOverview({
             `<h3>Solve Guide</h3>${getHtml(solveguide)}`;
     } else {
         document.getElementById("solve-guide").innerHTML = "";
+    }
+
+    if (imgId !== undefined) {
+        document.getElementById("image-placeholder").innerHTML = `Image id: ${imgId}`;
+    } else {
+        document.getElementById("image-placeholder").innerHTML = `No image specified`;
     }
 }
