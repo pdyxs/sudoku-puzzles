@@ -15,6 +15,7 @@ import sunnyWithAChanceOfFog from "./sunny-with-a-chance-of-fog";
 import cityscrapers from "./cityscrapers";
 import littleFillers from "./little-fillers";
 import timesApart from "./times-apart";
+import shipsInTheTime from "./ships-in-the-time";
 
 export const series = [
     {
@@ -42,6 +43,7 @@ export const series = [
         name: "Timeline",
         puzzles: [
             timesApart,
+            shipsInTheTime,
             howYouLearnTheTimeWar,
             howYouLiveTheTimeWar,
         ]

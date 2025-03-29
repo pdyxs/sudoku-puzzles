@@ -1,4 +1,4 @@
-const THICKNESS = 2.5;
+const THICKNESS = 3;
 const PADDING = 0.025;
 
 export function hideGridOutside(data, [startRow, endRow], [startCol, endCol]) {
@@ -17,7 +17,7 @@ export function hideGridOutside(data, [startRow, endRow], [startCol, endCol]) {
                 color: "#FFFFFF",
                 thickness: THICKNESS,
                 "stroke-linecap": "butt",
-                target: "overlay"
+                target: "cell-grids"
             });
         } else {
 
@@ -27,7 +27,7 @@ export function hideGridOutside(data, [startRow, endRow], [startCol, endCol]) {
                     color: "#FFFFFF",
                     thickness: THICKNESS,
                     "stroke-linecap": "butt",
-                    target: "overlay"
+                    target: "cell-grids"
                 })
             }
 
@@ -37,7 +37,7 @@ export function hideGridOutside(data, [startRow, endRow], [startCol, endCol]) {
                     color: "#FFFFFF",
                     thickness: THICKNESS,
                     "stroke-linecap": "butt",
-                    target: "overlay"
+                    target: "cell-grids"
                 })
             }
         }
@@ -51,7 +51,7 @@ export function hideGridOutside(data, [startRow, endRow], [startCol, endCol]) {
                 color: "#FFFFFF",
                 thickness: THICKNESS,
                 "stroke-linecap": "butt",
-                target: "overlay"
+                target: "cell-grids"
             });
         } else {
             if (startRow > 0) {
@@ -60,7 +60,7 @@ export function hideGridOutside(data, [startRow, endRow], [startCol, endCol]) {
                     color: "#FFFFFF",
                     thickness: THICKNESS,
                     "stroke-linecap": "butt",
-                    target: "overlay"
+                    target: "cell-grids"
                 })
             }
 
@@ -70,7 +70,7 @@ export function hideGridOutside(data, [startRow, endRow], [startCol, endCol]) {
                     color: "#FFFFFF",
                     thickness: THICKNESS,
                     "stroke-linecap": "butt",
-                    target: "overlay"
+                    target: "cell-grids"
                 })
             }
         }

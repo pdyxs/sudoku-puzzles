@@ -15,9 +15,9 @@ export default {
         addRules(data, texts.rules.default);
         addMsgCorrect(data, texts.msgcorrect.default);
         addRows(data, 3);
-        hideGridOutside(data, [0, 5], [0, 5]);
+        hideGridOutside(data, [0, 8], [0, 8]);
 
-        let cageRow = 8;
+        let cageRow = 11;
         const padding = 0.1;
         data.cages.forEach(cage => {
             data.cages.push({
@@ -39,16 +39,38 @@ export default {
             cageRow--;
         });
 
-        generateRowCols(data, [0, 5], [0, 5]);
+        const newOverlays = [];
+        data.overlays.forEach(({ center }) => {
+            newOverlays.push({
+                center,
+                width: 0.32,
+                height: 0.07,
+                backgroundColor: "#000",
+                borderColor: "#00000000",
+                target: "overlay",
+                angle: 45
+            }, {
+                center,
+                width: 0.32,
+                height: 0.07,
+                backgroundColor: "#000",
+                borderColor: "#00000000",
+                target: "overlay",
+                angle: -45
+            });
+        });
+        data.overlays.push(...newOverlays);
 
         for (let a = 0; a !== data.arrows.length; ++a) {
             data.arrows[a].target = "overlay";
         }
 
+        generateRowCols(data, [0, 8], [0, 8]);
+
         return data;
     },
     ...texts,
     imgId: undefined,
-    sudokupad: "https://sudokupad.app/pdyxs/times-apart",
+    sudokupad: "https://sudokupad.app/pdyxs/ships-in-the-time",
     lmd: undefined
 };
