@@ -1,0 +1,1 @@
+Next puzzle in this series: [Ships in the time](https://sudokupad.app/pdyxs/ships-in-the-time)

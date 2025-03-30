@@ -4,6 +4,7 @@ import puzzle from "./puzzle.json";
 import { addMsgCorrect, addRules, replaceRules, setupTexts } from "~/src/processing/messages";
 import { generateRowCols } from "~/src/processing/rowcol";
 import { hideGridOutside } from "~/src/processing/hide-grid";
+import { addSpaceTimeArrows } from "~/src/processing/spacetime-arrows";
 
 const texts = setupTexts(allTexts);
 
@@ -39,6 +40,7 @@ export default {
             cageRow--;
         });
 
+        //anti-kropkis
         const newOverlays = [];
         data.overlays.forEach(({ center }) => {
             newOverlays.push({
@@ -61,16 +63,13 @@ export default {
         });
         data.overlays.push(...newOverlays);
 
-        for (let a = 0; a !== data.arrows.length; ++a) {
-            data.arrows[a].target = "overlay";
-        }
-
+        addSpaceTimeArrows(data, 9);
         generateRowCols(data, [0, 8], [0, 8]);
 
         return data;
     },
     ...texts,
-    imgId: undefined,
+    imgId: "000TYI",
     sudokupad: "https://sudokupad.app/pdyxs/ships-in-the-time",
-    lmd: undefined
+    lmd: "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000MNK"
 };

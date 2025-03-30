@@ -5,6 +5,7 @@ import { generateRowCols } from "~/src/processing/rowcol";
 import { hideGridOutside } from "~/src/processing/hide-grid";
 import howTheTimeWarWorksUnsolved from "../how-the-time-war-works-unsolved";
 import howTheTimeWarWorksSolved from "../how-the-time-war-works-solved";
+import { addSpaceTimeArrows } from "~/src/processing/spacetime-arrows";
 
 const texts = setupTexts(allTexts);
 
@@ -47,6 +48,9 @@ export default {
         addRules(data, rules + texts.rulesPostSudokupad.default);
         addMsgCorrect(data, texts.msgcorrect.default);
         hideGridOutside(data, [0, 5], [0, 5]);
+
+        addSpaceTimeArrows(data, 6, true);
+
         generateRowCols(data, [0, 5], [0, 5]);
 
         const padding = 0.1;

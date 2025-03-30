@@ -37,29 +37,33 @@ export function replaceRules(text) {
     });
 }
 
+const markdownLinkFormatter = (elem, walk, builder, formatOptions) => {
+    const allowLink = elem.attribs?.href?.startsWith("https://sudokupad.app");
+
+    if (allowLink) {
+        builder.addInline("[");
+        formatOptions.linkBrackets = ['](', ')'];
+    } else {
+        formatOptions.ignoreHref = true;
+        formatOptions.linkBrackets = "";
+    }
+
+    const anchorFormatter = builder.options.formatters['anchor'];
+    if (anchorFormatter) {
+        anchorFormatter(elem, walk, builder, formatOptions);
+    }
+}
+
 export function addRules(data, RulesHtml) {
     data.metadata.rules =
         convert(RulesHtml, {
             wordwrap: false,
             formatters: {
-                markdownLinkFormatter: function (elem, walk, builder, formatOptions) {
-                    builder.addInline(formatOptions.prefix);
-                    const anchorFormatter = builder.options.formatters['anchor'];
-                    if (anchorFormatter) {
-                        anchorFormatter(elem, walk, builder, formatOptions);
-                    }
-                }
+                markdownLinkFormatter
             },
             selectors: [
                 { selector: 'strong', format: 'inlineSurround', options: { prefix: '*', suffix: '*' } },
-                {
-                    selector: 'a',
-                    format: 'markdownLinkFormatter',
-                    options: {
-                        prefix: '[',
-                        linkBrackets: ['](', ')']
-                    }
-                }
+                { selector: 'a', format: 'markdownLinkFormatter' }
             ]
         })
             .replaceAll("\n\n *", "\n *");
@@ -68,14 +72,11 @@ export function addRules(data, RulesHtml) {
 export function addMsgCorrect(data, MsgCorrectHTML) {
     data.metadata.msgcorrect = convert(MsgCorrectHTML + (snippets.contact?.default || ""), {
         wordwrap: false,
+        formatters: {
+            markdownLinkFormatter
+        },
         selectors: [
-            {
-                selector: 'a',
-                format: 'anchor',
-                options: {
-                    ignoreHref: true
-                }
-            }
+            { selector: 'a', format: 'markdownLinkFormatter' }
         ]
     });
 }

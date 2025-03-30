@@ -1,0 +1,1 @@
+Next puzzle in this series: [This is how you live the time war](https://sudokupad.app/pdyxs/this-is-how-you-live-the-time-war)

@@ -4,6 +4,7 @@ import { addMsgCorrect, addRules, replaceRules, setupTexts } from "~/src/process
 import { generateRowCols } from "~/src/processing/rowcol";
 import { hideGridOutside } from "~/src/processing/hide-grid";
 import { rulesPosts } from "../how-you-learn-the-time-war";
+import { addSpaceTimeArrows } from "~/src/processing/spacetime-arrows";
 
 const texts = setupTexts(allTexts);
 
@@ -19,6 +20,8 @@ export default {
         addMsgCorrect(data, texts.msgcorrect.default);
         generateRowCols(data, [0, 8], [0, 8]);
         hideGridOutside(data, [0, 8], [0, 8]);
+
+        addSpaceTimeArrows(data, 9, true);
 
         //Cage Lines
         data.lines = data.lines || [];

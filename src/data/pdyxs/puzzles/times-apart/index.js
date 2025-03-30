@@ -4,6 +4,7 @@ import puzzle from "./puzzle.json";
 import { addMsgCorrect, addRules, replaceRules, setupTexts } from "~/src/processing/messages";
 import { generateRowCols } from "~/src/processing/rowcol";
 import { hideGridOutside } from "~/src/processing/hide-grid";
+import { addSpaceTimeArrows } from "~/src/processing/spacetime-arrows";
 
 const texts = setupTexts(allTexts);
 
@@ -41,14 +42,12 @@ export default {
 
         generateRowCols(data, [0, 5], [0, 5]);
 
-        for (let a = 0; a !== data.arrows.length; ++a) {
-            data.arrows[a].target = "overlay";
-        }
+        addSpaceTimeArrows(data, 6);
 
         return data;
     },
     ...texts,
-    imgId: undefined,
+    imgId: "000TXS",
     sudokupad: "https://sudokupad.app/pdyxs/times-apart",
-    lmd: undefined
+    lmd: "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000MMV"
 };
