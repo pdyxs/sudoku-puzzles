@@ -16,6 +16,7 @@ import cityscrapers from "./cityscrapers";
 import littleFillers from "./little-fillers";
 import timesApart from "./times-apart";
 import shipsInTheTime from "./ships-in-the-time";
+import friendsInTheFog from "./friends-in-the-fog";
 
 export const series = [
     {
@@ -28,7 +29,8 @@ export const series = [
             whispersInTheMist,
             someThingsFogn,
             recountingTheRooms,
-            sunnyWithAChanceOfFog
+            sunnyWithAChanceOfFog,
+            friendsInTheFog
         ]
     },
     {
