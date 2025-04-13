@@ -1,0 +1,1 @@
+*This is a follow-up to [Whispers in the Mist](https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000LUE), where fog clearance has a clear and defined meaning.*

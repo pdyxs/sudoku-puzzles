@@ -1,0 +1,1 @@
+The digits in all caged cells, from top to bottom and left to right, starting with the first row.

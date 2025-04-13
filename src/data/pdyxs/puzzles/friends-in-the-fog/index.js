@@ -129,7 +129,7 @@ export default {
         return data;
     },
     ...texts,
-    imgId: undefined,
-    sudokupad: undefined,
-    lmd: undefined,
+    imgId: "000U8C",
+    sudokupad: "https://sudokupad.app/pdyxs/friends-in-the-fog",
+    lmd: "https://logic-masters.de/Raetselportal/Raetsel/zeigen.php?id=000MVQ",
 };
